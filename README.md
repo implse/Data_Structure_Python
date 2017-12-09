@@ -10,7 +10,7 @@
 |Insertion/Deletion in middle|O(n)   |
 |Access Time                 |O(n)   |
 
-## Basic Operation on the linkled list
+## Basic Operations on the linkled list
 
 - Add value to head/tail
 - Add value at specific index
