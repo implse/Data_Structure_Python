@@ -1,6 +1,7 @@
 # Data Structure in Python
 
 ## Linked List
+A linked List is a data structure used for storing collections of data.
 
 |Operation                   |Big O  |
 |----------------------------|-------|
@@ -12,17 +13,29 @@
 
 ## Basic Operations on the linkled list
 
-- Add value to head/tail
+- Add value to Head/Tail
 - Add value at specific index
 - Remove value
 - Find value
-- Create list from linkedList
-- Reverse the linked list
+- Create list from Linked List
+- Reverse the Linked List
 
 ## Stack
+A slack is a simple data structure used for storing data.
+
+The last element inserted is the first one to be deleted.
+
+__LIFO__ : Last in, first out
+
 Linked List implementation of a Stack.
 
-LIFO - Last in, first out
+
+|Operation                   |Big O  |
+|----------------------------|-------|
+|Push value                  |O(1)   |
+|Pop value                   |O(1)   |
+|Size                        |O(1)   |
+
 
 ## Basic Operations on the Stack
 
