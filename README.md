@@ -18,3 +18,12 @@
 - Find value
 - Create list from linkedList
 - Reverse the linked list
+
+## Stack
+Linked List implementation of a Stack.
+
+LIFO - Last in, first out
+
+## Basic Operations on the Stack
+
+- Push and Pop operations.
