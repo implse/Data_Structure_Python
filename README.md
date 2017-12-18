@@ -21,7 +21,7 @@ A linked List is a data structure used for storing collections of data.
 - Reverse the Linked List
 
 ## Stack
-A slack is a simple data structure used for storing data.
+A stack is a simple data structure used for storing data.
 
 The last element inserted is the first one to be deleted.
 
