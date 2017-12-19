@@ -25,9 +25,9 @@ A linked List is a data structure used for storing collections of data.
 - Reverse the Linked List
 
 ## Stack
-A slack is a simple data structure used for storing data.
+A stack is a simple data structure used for storing data.
 
-The last element inserted is the first one to be deleted. Last in, first out (LIFO).
+The last element inserted is the first one to be deleted. Last in, First out (LIFO).
 
 
 Linked List implementation of a Stack.
@@ -43,3 +43,16 @@ Linked List implementation of a Stack.
 ## Basic Operations on the Stack
 
 - Push and Pop operations.
+
+## Queue
+
+A Queue is a data structure used for storing data similar to Stack.
+
+The first element to be inserted is the first one Lo be deleted. First in First
+out (FIFO).
+
+## Basic Operations on the Queue
+
+- EnQueue operation is implemented by inserting an element at the end of the list.
+
+- DeQueue operation is implemented by deleting an element from the beginning of the list.
