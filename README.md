@@ -3,6 +3,10 @@
 ## Linked List
 A linked List is a data structure used for storing collections of data.
 
+- Not contiguous piece of memory.
+- Differing size storage space at each index.
+- Dynamic - New piece of memory allocated for each node.
+
 |Operation                   |Big O  |
 |----------------------------|-------|
 |Indexing                    |O(n)   |
@@ -23,9 +27,8 @@ A linked List is a data structure used for storing collections of data.
 ## Stack
 A slack is a simple data structure used for storing data.
 
-The last element inserted is the first one to be deleted.
+The last element inserted is the first one to be deleted. Last in, first out (LIFO).
 
-__LIFO__ : Last in, first out
 
 Linked List implementation of a Stack.
 
