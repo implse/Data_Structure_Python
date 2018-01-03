@@ -48,7 +48,7 @@ Linked List implementation of a Stack.
 
 - Most important application of stack is : Stack Memory.
 - Implementing function calls including recursion.
-- Depth-First Search graph algorithms can be implemented with stack (or rercursion).
+- Depth-First Search graph algorithms can be implemented with stack (or recursion).
 - Finding Euler-Cycles in a graph.
 - Balancing symbols.
 
