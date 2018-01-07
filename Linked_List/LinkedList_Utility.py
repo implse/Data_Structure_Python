@@ -22,7 +22,7 @@ def List_from_LinkedList(l):
         current = current.next
     return out
 
-# Reverse a Linked List
+# Reverse a Linked List : Iterative Method
 def Reverse_LinkedList(l):
     current = l
     next_node = None
@@ -33,3 +33,14 @@ def Reverse_LinkedList(l):
         previous_node = current
         current = next_node
     return previous_node
+
+# Reverse a linked List : Recursive Method
+def RecursiveReverse_LinkedList(l, prev = None):
+    current = l
+    if not current:
+        return prev
+    next_node = current.next
+    current.next = prev
+    prev = current
+    current = next_node
+    return RecursiveReverse_LinkedList(current, prev)
