@@ -99,15 +99,15 @@ __Depth__ : Number of edges between the node and the root.
 __Size__ : Numeber of nodes in the tree.
 
 
-### Binary tree
+### Binary Tree
 
-A tree is a binary tree if each node has zero, one or two children.
+A Tree is a Binary Tree if each node has zero, one or two children.
 
-strict binary tree : each node has exactly two children or no children.
+Strict Binary Tree : each node has exactly two children or no children.
 
-full binary tree : each node has exactly two children and all leaf nodes.
+Full Binary Tree : each node has exactly two children and all leaf nodes.
 
-### Binary Search tree
+### Binary Search Tree
 
 Always sorted by implementation.
 
