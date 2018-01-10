@@ -15,7 +15,7 @@ A linked List is a data structure used for storing collections of data.
 |Insertion/Deletion in middle|O(n)   |
 |Access Time                 |O(n)   |
 
-## Basic Operations on the linkled list
+## Basic Operations on the Linked List
 
 - Add value to Head/Tail
 - Add value at specific index
