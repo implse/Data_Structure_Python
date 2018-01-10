@@ -71,3 +71,65 @@ Linked List implementation of a Queue.
 
 - IO Buffers.
 - CPU scheduling.
+
+## Tree
+
+A Tree structure is a way of representing the hierarchical nature of a structure in a graphical form.
+
+Tree is an example of non-linear data structure.
+
+### Glossary
+
+__Root__ : top most node.
+
+__Edge__ : refer to the link from parent to child.
+
+__Siblings__ : Children of the same parent.
+
+__Leaf__ : A node with no children
+
+__Height(Tree)__ : The height of a tree is the length of the path from the root to the deepest node in the tree.
+
+__Height(Node)__ : the heigth of a node is the length of the path from that node to the deepest node.
+
+__Level__ : Number of edges between the node and the root + 1.
+
+__Depth__ : Number of edges between the node and the root.
+
+__Size__ : Numeber of nodes in the tree.
+
+
+### Binary tree
+
+A tree is a binary tree if each node has zero, one or two children.
+
+strict binary tree : each node has exactly two children or no children.
+
+full binary tree : each node has exactly two children and all leaf nodes.
+
+### Binary Search tree
+
+Always sorted by implementation.
+
+For each node:
+- Left children are smaller.
+- Right children are greater.
+
+No duplicate Keys.
+
+__Advantages__ :
+
+- Fast search, insertion, deletion especially when balanced.
+
+- Sort as you go instead of all at once.
+
+- Simple implementation for good performance.
+
+### Basic Operations on the Binary Tree
+
+- Inserting an element into a tree.
+- Deleting an element from a tree.
+- Searching for an element.
+- Traversing the tree.
+- Finding the size of the tree.
+- Finding the height of the tree.
