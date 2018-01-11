@@ -24,6 +24,14 @@ A linked List is a data structure used for storing collections of data.
 - Create list from Linked List
 - Reverse the Linked List
 
+## Linked List vs Array
+
+Linked List are preferable when :
+- You need Insertion / Deletion in the list to be extremly fast.
+- You Insert / Delete items in the middle of the list.
+- You can’t evaluate the size of the list, it needs to grow
+or shrink throughout the execution.
+
 ## Stack
 A stack is a simple data structure used for storing data.
 
@@ -60,6 +68,12 @@ The first element to be inserted is the first one Lo be deleted. First in First
 out (FIFO).
 
 Linked List implementation of a Queue.
+
+|Operation                   |Big O  |
+|----------------------------|-------|
+|Search                      |O(n)   |
+|Insert                      |O(1)   |
+|Delete                      |O(1)   |
 
 ### Basic Operations on the Queue
 
@@ -133,3 +147,17 @@ __Advantages__ :
 - Traversing the tree.
 - Finding the size of the tree.
 - Finding the height of the tree.
+
+|Operation                   |Big O    |
+|----------------------------|---------|
+|Search                      |O(log n) |
+|Insert                      |O(log n) |
+|Delete                      |O(log n) |
+
+### Binary Tree Traversals:
+
+__Preorder Traversal__:
+
+- Visit the root.
+- Traverse the left subtree in Preorder.
+- Traverse the right subtree in Preorder.

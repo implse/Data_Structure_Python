@@ -10,7 +10,7 @@ class BinarySearchTree(object):
 
     def insert(self, value):
         if not self.root:
-            self.root = None(value)
+            self.root = Node(value)
 
     def insertNode(self, value, node):
         if value < node.value:
@@ -23,3 +23,20 @@ class BinarySearchTree(object):
                 self.insertNode(value, node.rightChild)
             else:
                 node.rightChild = Node(value)
+
+
+def Tree(object):
+    def __init__(self):
+        self.root = None
+
+
+
+
+
+        
+    def insert(self, value):
+        if self.root:
+            return self.root.insert(value)
+        else:
+            self.root = Node(value)
+            return True
