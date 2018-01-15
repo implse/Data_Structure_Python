@@ -23,20 +23,3 @@ class BinarySearchTree(object):
                 self.insertNode(value, node.rightChild)
             else:
                 node.rightChild = Node(value)
-
-
-def Tree(object):
-    def __init__(self):
-        self.root = None
-
-
-
-
-
-        
-    def insert(self, value):
-        if self.root:
-            return self.root.insert(value)
-        else:
-            self.root = Node(value)
-            return True

@@ -100,17 +100,17 @@ __Edge__ : refer to the link from parent to child.
 
 __Siblings__ : Children of the same parent.
 
-__Leaf__ : A node with no children
+__Leaf__ : A node with no children.
 
 __Height(Tree)__ : The height of a tree is the length of the path from the root to the deepest node in the tree.
 
-__Height(Node)__ : the heigth of a node is the length of the path from that node to the deepest node.
+__Height(Node)__ : The height of a node is the length of the path from that node to the deepest node. Or is the number of layers it contains.
 
 __Level__ : Number of edges between the node and the root + 1.
 
 __Depth__ : Number of edges between the node and the root.
 
-__Size__ : Numeber of nodes in the tree.
+__Size__ : Number of nodes in the tree.
 
 
 ### Binary Tree
@@ -154,10 +154,16 @@ __Advantages__ :
 |Insert                      |O(log n) |
 |Delete                      |O(log n) |
 
+Worst case scenarios :
+
+If the Tree become unbalanced then the operations running times can be reduced to O(n).
+
+
 ### Binary Tree Traversals:
 
-__Preorder Traversal__:
 
-- Visit the root.
-- Traverse the left subtree in Preorder.
-- Traverse the right subtree in Preorder.
+3 main Tree Traversal Method :
+
+- InOrder : visit the Left SubTree then the Root the the Right SubTree recursively.
+- PreOrder : visit the Root then Left SubTree then the Right SubTree recursively.
+- PostOrder : visit the Left SubTree then the right Sub Tree and the Root recursively.
