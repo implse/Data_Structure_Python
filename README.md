@@ -141,12 +141,13 @@ __Advantages__ :
 
 ### Basic Operations on the Binary Tree
 
-- Inserting an element into a tree.
-- Deleting an element from a tree.
+- Inserting an element into a Tree.
+- Deleting an element from a Tree.
 - Searching for an element.
-- Traversing the tree.
-- Finding the size of the tree.
-- Finding the height of the tree.
+- Traversing the Tree.
+- Find minimum and maximum value in the Tree.
+- Finding the size of the Tree.
+- Finding the height of the Tree.
 
 |Operation                   |Big O    |
 |----------------------------|---------|
