@@ -31,6 +31,8 @@ class BinarySearchTree(object):
                 node.rightChild = Node(value)
 
     # Traverse : In-order recursive
+
+    # Method 1 : print value
     def traversInOrder(self):
         if self.root:
             return self.traverseInOrder_Recursive(self.root)
@@ -38,27 +40,57 @@ class BinarySearchTree(object):
     def traverseInOrder_Recursive(self, node):
         if node.leftChild:
             self.traverseInOrder_Recursive(node.leftChild)
-
         print(node.value)
-
         if node.rightChild:
             self.traverseInOrder_Recursive(node.rightChild)
 
+    # Method 2 : return a list of values
+    def traversInOrder(self):
+        if not self.root:
+            return None
+        else:
+            result = []
+            def traverseInOrder_Recursive(node):
+                if node.leftChild:
+                    traverseInOrder_Recursive(node.leftChild)
+                result.append(node.value)
+                if node.rightChild:
+                    traverseInOrder_Recursive(node.rightChild)
+            traverseInOrder_Recursive(self.root)
+        return result
+
     # Traverse : Pre-order recursive
+
+    # Method 1 : print value
     def traversePreOrder(self):
         if self.root:
             return self.traversePrerOrder_Recursive(self.root)
 
     def traversePrerOrder_Recursive(self, node):
         print(node.value)
-
         if node.leftChild:
-            self.traverseInOrder_Recursive(node.leftChild)
-
+            self.traversePrerOrder_Recursive(node.leftChild)
         if node.rightChild:
-            self.traverseInOrder_Recursive(node.rightChild)
+            self.traversePrerOrder_Recursive(node.rightChild)
+
+    # Method 2 : return a list of values
+    def traversePreOrder(self):
+        if not self.root:
+            return None
+        else:
+            result = []
+            def traversePrerOrder_Recursive(node):
+                result.append(node.value)
+                if node.leftChild:
+                    traversePrerOrder_Recursive(node.leftChild)
+                if node.rightChild:
+                    traversePrerOrder_Recursive(node.rightChild)
+            traversePrerOrder_Recursive(self.root)
+        return result
 
     # Traverse : Post-order recursive
+
+    # Method 1 : print value
     def traversePostOrder(self):
         if self.root:
             return self.traversePostOrder_Recursive(self.root)
@@ -66,11 +98,25 @@ class BinarySearchTree(object):
     def traversePostOrder_Recursive(self, node):
         if node.leftChild:
             self.traversePostOrder_Recursive(node.leftChild)
-
         if node.rightChild:
             self.traversePostOrder_Recursive(node.rightChild)
-
         print(node.value)
+
+    # Method 2 : return a list of values
+    def traversePostOrder(self):
+        if not self.root:
+            return None
+        else:
+            result = []
+            def traversePostOrder_Recursive(node):
+                if node.leftChild:
+                    traversePostOrder_Recursive(node.leftChild)
+                if node.rightChild:
+                    traversePostOrder_Recursive(node.rightChild)
+                result.append(node.value)
+            traversePostOrder_Recursive(self.root)
+        return result
+
 
     # Find Minimum Value
     def findMin(self):
@@ -98,7 +144,7 @@ bst = BinarySearchTree()
 for v in values:
     bst.insert(v)
 
-bst.insert(7)
+
 bst.insert(21)
 
 # Traverse : InOrder Recursive
