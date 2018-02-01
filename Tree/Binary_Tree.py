@@ -132,9 +132,17 @@ class BinarySearchTree(object):
             current = current.rightChild
         return current.value
 
-
-
-
+    # Find value
+    def find(self, value):
+        current = self.root
+        while current.value != value:
+            if value < current.value:
+                current = current.leftChild
+            elif value > current.value:
+                current = current.rightChild
+            if current == None:
+                return None
+        return current.value
 
 # Test
 values = [9, 4, 17, 3, 6, 22, 5, 7, 20, 10]
@@ -163,3 +171,7 @@ print(bst_min)
 print("Find maximum value in Tree")
 bst_max = bst.findMax()
 print(bst_max)
+s = 20
+print("Searching " + str(s) + " value in Tree")
+bst_find = bst.find(20)
+print(bst_find)
