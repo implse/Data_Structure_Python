@@ -92,6 +92,7 @@ A Tree structure is a way of representing the hierarchical nature of a structure
 
 Tree is an example of non-linear data structure.
 
+
 ### Glossary
 
 __Root__ : top most node.
@@ -115,7 +116,8 @@ __Size__ : Number of nodes in the tree.
 
 ### Binary Tree
 
-A Tree is a Binary Tree if each node has zero, one or two children.
+__Binary Tree__ is a specialized form of tree with two child (left child and right Child). It is simply representation of data in Tree structure
+
 
 Strict Binary Tree : each node has exactly two children or no children.
 
@@ -125,9 +127,11 @@ Full Binary Tree : each node has exactly two children and all leaf nodes.
 
 Always sorted by implementation.
 
-For each node:
-- Left children are smaller.
-- Right children are greater.
+__Binary Search Tree (BST)__ is a special type of Binary Tree that follows following condition:
+
+- left child node is smaller than its parent Node.
+- right child node is greater than its parent Node.
+
 
 No duplicate Keys.
 

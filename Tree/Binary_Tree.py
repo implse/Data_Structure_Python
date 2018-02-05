@@ -171,7 +171,7 @@ print(bst_min)
 print("Find maximum value in Tree")
 bst_max = bst.findMax()
 print(bst_max)
-s = 20
+s = 10
 print("Searching " + str(s) + " value in Tree")
-bst_find = bst.find(20)
+bst_find = bst.find(s)
 print(bst_find)
