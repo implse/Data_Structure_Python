@@ -127,7 +127,7 @@ Full Binary Tree : each node has exactly two children and all leaf nodes.
 
 Always sorted by implementation.
 
-__Binary Search Tree (BST)__ is a special type of Binary Tree that follows following condition:
+__Binary Search Tree (BST or Ordered Binary Tree)__ is a special type of Binary Tree that follows following condition:
 
 - left child node is smaller than its parent Node.
 - right child node is greater than its parent Node.
