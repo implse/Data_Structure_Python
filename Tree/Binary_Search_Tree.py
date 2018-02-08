@@ -144,7 +144,7 @@ class BinarySearchTree(object):
                 return None
         return current.value
 
-    # Print all the paths from ROOT to LEAF in a Tree
+    # Print all the paths from ROOT to LEAF in a Tree. Traverse Inorder.
     def print_all_paths(self):
         path = []
         def print_paths(node, path):
