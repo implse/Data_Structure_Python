@@ -144,6 +144,20 @@ class BinarySearchTree(object):
                 return None
         return current.value
 
+    # Print all the paths from ROOT to LEAF in a Tree
+    def print_all_paths(self):
+        path = []
+        def print_paths(node, path):
+            if node == None:
+                return
+            path.append(node.value)
+            print_paths(node.leftChild, path)
+            if node.leftChild == None and node.rightChild == None:
+                print(path)
+            print_paths(node.rightChild, path)
+            path.pop()
+        return print_paths(self.root, path)
+
 # Test
 values = [9, 4, 17, 3, 6, 22, 5, 7, 20, 10]
 
