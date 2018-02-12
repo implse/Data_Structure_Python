@@ -158,6 +158,20 @@ class BinarySearchTree(object):
             path.pop()
         return print_paths(self.root, path)
 
+    # Print values by Level Order
+    def level_order(self):
+        q = []
+        current = self.root
+        q.append(current)
+        while len(q) > 0:
+            current = q[0]
+            print(current.value)
+            if current.leftChild != None:
+                q.append(current.leftChild)
+            if current.rightChild != None:
+                q.append(current.rightChild)
+            q.pop(0)
+
 # Test
 values = [9, 4, 17, 3, 6, 22, 5, 7, 20, 10]
 
