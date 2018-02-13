@@ -172,3 +172,11 @@ If the Tree become unbalanced then the operations running times can be reduced t
 - InOrder : visit the Left SubTree then the Root the the Right SubTree recursively.
 - PreOrder : visit the Root then Left SubTree then the Right SubTree recursively.
 - PostOrder : visit the Left SubTree then the right Sub Tree and the Root recursively.
+
+Depth First Search Traversal :
+- InOrder
+- PreOrder
+- PostOrder
+
+Bread First Search Traversal :
+- Level Order

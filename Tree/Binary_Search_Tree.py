@@ -171,35 +171,3 @@ class BinarySearchTree(object):
             if current.rightChild != None:
                 q.append(current.rightChild)
             q.pop(0)
-
-# Test
-values = [9, 4, 17, 3, 6, 22, 5, 7, 20, 10]
-
-bst = BinarySearchTree()
-
-for v in values:
-    bst.insert(v)
-
-
-bst.insert(21)
-
-# Traverse : InOrder Recursive
-print("TravereInOrder: ")
-in_order = bst.traversInOrder()
-print(in_order)
-print("Traverse PreOrder: ")
-pre_order = bst.traversePreOrder()
-print(pre_order)
-print("Traverse PostOrder: ")
-post_order = bst.traversePostOrder()
-print(post_order)
-print("Find Minimum value in Tree: ")
-bst_min = bst.findMin()
-print(bst_min)
-print("Find maximum value in Tree")
-bst_max = bst.findMax()
-print(bst_max)
-s = 10
-print("Searching " + str(s) + " value in Tree")
-bst_find = bst.find(s)
-print(bst_find)
