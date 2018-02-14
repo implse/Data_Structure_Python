@@ -123,8 +123,9 @@ Strict Binary Tree : each node has exactly two children or no children.
 
 Full Binary Tree : each node has exactly two children and all leaf nodes.
 
-The number of nodes n in a full binary tree is (2**h+1)-1. Since, there are h levels we need to add all nodes
-at each level [2**0 + 2**1+ 2**2 + ... + 2**h = (2**h+1)-1].
+The number of nodes n in a full binary tree is (2^h + 1) - 1.
+
+Since, there are h levels we need to add all nodes at each level [ 2^0 + 2^1 + 2^2 + ... + 2^h = (2^h + 1) - 1].
 
 ### Binary Search Tree
 
