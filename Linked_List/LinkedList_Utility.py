@@ -59,3 +59,18 @@ def Print_Recursive_LinkedList(l):
         return current
     print(current.value)
     Print_Recursive_LinkedList(current.next)
+
+# Merge two sorted Linked ListNode
+def merge_2_sorted_LinkedList(l1, l2):
+    dummy = Node()
+    tail = dummy
+    while l1 and l2:
+        if l1.data < l2.data:
+            tail.next = l1
+            l1 =  l1.next
+        else:
+            tail.next =  l2
+            l2 = l2.next
+        tail = tail.next
+    tail.next = l1 or l2
+    return dummy.next
