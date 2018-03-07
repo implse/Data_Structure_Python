@@ -26,11 +26,16 @@ A linked List is a data structure used for storing collections of data.
 
 ## Linked List vs Array
 
-Linked List are preferable when :
-- You need Insertion / Deletion in the list to be extremly fast.
+Linked List are preferable:
+- You need Insertion / Deletion in the list to be extremely fast.
 - You Insert / Delete items in the middle of the list.
 - You can’t evaluate the size of the list, it needs to grow
 or shrink throughout the execution.
+
+Array are preferable over Linked List:
+- You frequently need random, unordered access to the data.
+- You need extreme performance to access the items.
+- The number of items doesn't change during execution, so you can easily allocate contiguous space of computer memory.
 
 ## Stack
 A stack is a simple data structure used for storing data.
