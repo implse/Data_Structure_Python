@@ -39,12 +39,3 @@ class Trie(object):
         word = ""
         lookup(current, word)
         return list_words if len(list_words) > 0 else None
-
-# Test
-trie_test = Trie()
-trie_test.insert('mimi')
-trie_test.insert('keanu')
-trie_test.insert('caramel')
-print(trie_test.search('mimi'))
-print(trie_test.search('mimigentil'))
-print(trie_test.print_words())
