@@ -172,7 +172,7 @@ class BinarySearchTree(object):
                 q.append(current.rightChild)
             q.pop(0)
 
-    # Size of a Binary Tree
+    # Size of a Binary Tree : Number of nodes in the Tree
     def size_binary_tree(self):
         def size(node):
             if node == None:
