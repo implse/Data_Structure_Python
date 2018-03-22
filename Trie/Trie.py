@@ -1,6 +1,6 @@
 class Node(object):
     def __init__(self):
-        self.childrens = {}
+        self.children = {}
         self.endOfWord = False
 
 class Trie(object):
@@ -10,26 +10,26 @@ class Trie(object):
     def insert(self, word):
         current = self.root
         for char in word:
-            if char not in current.childrens:
-                current.childrens[char] = Node()
-            current = current.childrens[char]
+            if char not in current.children:
+                current.children[char] = Node()
+            current = current.children[char]
         current.endOfWord = True
 
     def search(self, word):
         current = self.root
         for char in word:
-            if char not in current.childrens:
+            if char not in current.children:
                 return False
-            current = current.childrens[char]
+            current = current.children[char]
         return current.endOfWord
 
     def print_words(self):
         list_words = []
         current = self.root
         def lookup(current, word):
-            if len(current.childrens) > 0:
-                for char in current.childrens:
-                    lookup(current.childrens[char], word+char)
+            if len(current.children) > 0:
+                for char in current.children:
+                    lookup(current.children[char], word+char)
                 if current.endOfWord:
                     list_words.append(word)
             else:
