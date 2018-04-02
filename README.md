@@ -173,7 +173,7 @@ Worst case scenarios :
 If the Tree become unbalanced then the operations running times can be reduced to O(n).
 
 
-### Binary Tree Traversals:
+### Binary Search Tree Traversals:
 
 
 3 main Tree Traversal Method :
@@ -189,3 +189,9 @@ Depth First Search Traversal :
 
 Bread First Search Traversal :
 - Level Order
+
+
+### Delete a Node in a Binary Search Tree
+
+Complexity : We have to find the Node then we delete it or set it to None.
+O(log n) find operation + O(1) deletion = O(log n)
