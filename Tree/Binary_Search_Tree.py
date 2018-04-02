@@ -18,13 +18,13 @@ class BinarySearchTree(object):
 
     def insertNode(self, value, node):
         if value < node.value:
-            # Left Sub Tree
+            # leftChild Sub Tree
             if node.leftChild:
                 self.insertNode(value, node.leftChild)
             else:
                 node.leftChild = Node(value)
         else:
-            # Right Sub Tree
+            # rightChild Sub Tree
             if node.rightChild:
                 self.insertNode(value, node.rightChild)
             else:
@@ -40,34 +40,34 @@ class BinarySearchTree(object):
             return node
         # Searching Node.value
         if value < node.value:
-            node.left = self.remove(value, node.left)
+            node.leftChild = self.remove(value, node.leftChild)
         elif value > node.value:
-            node.right = self.remove(value, node.right)
+            node.rightChild = self.remove(value, node.rightChild)
         else:
             # Case 1: No child
-            if node.left == None and node.right == None:
+            if node.leftChild == None and node.rightChild == None:
                 del node
                 return None
             # Case 2: One child
-            elif node.left == None:
-                tempNode = node.right
+            elif node.leftChild == None:
+                tempNode = node.rightChild
                 del node
                 return tempNode
-            elif node.right == None:
-                tempNode = node.left
+            elif node.rightChild == None:
+                tempNode = node.leftChild
                 del node
                 return tempNode
             # Case 3: Two Children
             else:
-                tempNode = self.getPredecessor(node.left)
+                tempNode = self.getPredecessor(node.leftChild)
                 node.value = tempNode.value
-                node.left = self.remove(tempNode.value, node.left)
+                node.leftChild = self.remove(tempNode.value, node.leftChild)
         return node
 
     # Find predecessor
     def getPredecessor(self, node):
-        if node.right:
-            return self.getPredecessor(node.right)
+        if node.rightChild:
+            return self.getPredecessor(node.rightChild)
         return node
 
     # Traverse : In-order recursive
