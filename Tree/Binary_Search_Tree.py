@@ -30,6 +30,46 @@ class BinarySearchTree(object):
             else:
                 node.rightChild = Node(value)
 
+    # Remove Method
+    def removeNode(self, value):
+        if self.root:
+            return self.remove(value, self.root)
+
+    def remove(self, value, node):
+        if node == None:
+            return node
+        # Searching Node.value
+        if value < node.value:
+            node.left = self.remove(value, node.left)
+        elif value > node.value:
+            node.right = self.remove(value, node.right)
+        else:
+            # Case 1: No child
+            if node.left == None and node.right == None:
+                del node
+                return None
+            # Case 2: One child
+            elif node.left == None:
+                tempNode = node.right
+                del node
+                return tempNode
+            elif node.right == None:
+                tempNode = node.left
+                del node
+                return tempNode
+            # Case 3: Two Children
+            else:
+                tempNode = self.getPredecessor(node.left)
+                node.value = tempNode.value
+                node.left = self.remove(tempNode.value, node.left)
+        return node
+
+    # Find predecessor
+    def getPredecessor(self, node):
+        if node.right:
+            return self.getPredecessor(node.right)
+        return node
+
     # Traverse : In-order recursive
 
     # Method 1 : print value
