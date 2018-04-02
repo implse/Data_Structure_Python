@@ -195,3 +195,17 @@ Bread First Search Traversal :
 
 Complexity : We have to find the Node then we delete it or set it to None.
 O(log n) find operation + O(1) deletion = O(log n)
+
+#### 3 Cases:
+- No children.
+- One Child.
+- Two children.
+
+#### Method for Two Children case:
+
+Two possible options: We look for the largest Node in the left subtree (Predecessor) or the smallest Node int the right subtree (Successor).
+
+- Start at the Root, find the node to delete.
+- Find Predecessor or Successor
+- Replace Node to delete value with Predecessor value.
+- Delete predecessor.
