@@ -218,6 +218,24 @@ A Graph is an abstract data type.
 
 Graphs are mathematical structures to model pairwise relations between given object.
 
-A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of pairs of vertices.
+A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of pairs of vertices called Edges.
 
 There are two types of graphs: Directed and Undirected.
+
+### Applications
+
+- Shortest Path Algorithm (GPS, High Frequency Trading).
+- Graphs traversing: web crawlers.
+- Spanning Trees: network protocol.
+- Transportation network: Highway and Flight network.
+- Graph theory is used for the study of algorithms :
+    - Dijkstra's Algorithm
+    - Prim's Algorithm
+    - Kruskal's Algorithm
+
+### Graph representation
+
+There are tree way to represent Graph:
+  - Matrix
+  - List
+  - Set
