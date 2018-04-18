@@ -235,7 +235,16 @@ There are two types of graphs: Directed and Undirected.
 
 ### Graph representation
 
-There are tree way to represent Graph:
-  - Matrix
-  - List
-  - Set
+There are two common way to represent Graph:
+  - Adjacency Matrix
+  - Adjacency List
+
+### Adjacency Matrix
+
+An adjacency matrix is a VxV binary matrix.
+
+A binary matrix is a matrix in which the cells can have only one of two possible values. 0 or 1.
+
+Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O(V**2).
+
+### Adjacency List
