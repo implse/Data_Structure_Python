@@ -220,7 +220,19 @@ Graphs are mathematical structures to model pairwise relations between given obj
 
 A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of pairs of vertices called Edges.
 
-There are two types of graphs: Directed and Undirected.
+There are tree types of graphs: Directed, Undirected and Weighted.
+
+#### Vocabulary
+
+##### Edges :
+Represent the connection between two vertices.
+##### Vertices :
+Nodes in the graph
+##### Path :
+A sequence of connected vertices.
+##### Cycles :
+A path that is cyclical.
+
 
 ### Applications
 
