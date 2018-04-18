@@ -233,6 +233,17 @@ There are two types of graphs: Directed and Undirected.
     - Prim's Algorithm
     - Kruskal's Algorithm
 
+### Type of Graph
+
+#### Undirected Graph :
+An undirected graph is a graph in which all the edges are bi-directional i.e. the edges do not point in any specific direction.
+
+#### Directed Graph :
+A directed graph is a graph in which all the edges are uni-directional i.e. the edges point in a single direction.
+
+#### Weighted Graph :
+In a weighted graph, each edge is assigned a weight or cost.
+
 ### Graph representation
 
 There are two common way to represent Graph:
