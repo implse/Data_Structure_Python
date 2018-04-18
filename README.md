@@ -15,7 +15,7 @@ A linked List is a data structure used for storing collections of data.
 |Insertion/Deletion in middle|O(n)   |
 |Access Time                 |O(n)   |
 
-## Basic Operations on the Linked List
+## Basic Operations on Linked List
 
 - Add value to Head/Tail
 - Add value at specific index
@@ -53,7 +53,7 @@ Linked List implementation of a Stack.
 |Size                        |O(1)   |
 
 
-### Basic Operations on the Stack
+### Basic Operations on Stack
 
 - Push and Pop operations.
 
@@ -80,7 +80,7 @@ Linked List implementation of a Queue.
 |Insert                      |O(1)   |
 |Delete                      |O(1)   |
 
-### Basic Operations on the Queue
+### Basic Operations on Queue
 
 - EnQueue operation is implemented by inserting an element at the end of the list.
 
@@ -152,7 +152,7 @@ __Advantages__ :
 
 - Simple implementation for good performance.
 
-### Basic Operations on the Binary Tree
+### Basic Operations on Binary Tree
 
 - Inserting an element into a Tree.
 - Deleting an element from a Tree.
@@ -275,3 +275,11 @@ Adjacency matrix provides constant time access (O(1) ) to determine if there is 
 An adjacency list is an array A of separate lists. Each element of the array Ai is a list, which contains all the vertices that are adjacent to vertex i.
 
 The space complexity of adjacency list is O(V + E) because in an adjacency list information is stored only for those edges that actually exist in the graph. In a lot of cases, where a matrix is sparse using an adjacency matrix may not be very useful. This is because using an adjacency matrix will take up a lot of space where most of the elements will be 0, anyway. In such cases, using an adjacency list is better.
+
+### Basic Operations on Graph
+
+- Adding an edge
+- Deleting an edge
+- Detecting an edge
+- Finding neighbors of a vertex
+- Finding a path between two vertices
