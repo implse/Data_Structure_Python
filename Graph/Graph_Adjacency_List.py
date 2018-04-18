@@ -32,3 +32,21 @@ class Graph(object):
     def print_graph(self):
         for key in sorted(list(self.vertices.keys())):
             print(key + str(self.vertices[key].neighbors))
+
+# Test
+g = Graph()
+a = Vertex('A')
+g.add_vertex(a)
+b = Vertex('B')
+g.add_vertex(b)
+
+for i in range(ord('A'), ord('K')):
+    v = Vertex(chr(i))
+    g.add_vertex(v)
+
+edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ', 'HI']
+
+for edge in edges:
+    g.add_edge(edge[:1], edge[1:])
+
+g.print_graph()
