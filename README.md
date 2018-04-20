@@ -293,3 +293,5 @@ Con : Slower for dense graph.
 - Finding a path between two vertices
 
 ### Graph Traversals:
+
+- Breadth First Search
