@@ -213,12 +213,10 @@ Two possible options: We look for the largest Node in the left subtree (Predeces
 
 ## Graph
 
+Graphs are mathematical structures that represent pairwise relationships between objects. A graph is an abstract data structure that represents the relationship between various objects.
 
-A Graph is an abstract data type.
+A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between vertices called Edges.
 
-Graphs are mathematical structures to model pairwise relations between given object.
-
-A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of pairs of vertices called Edges.
 
 There are tree types of graphs: Directed, Undirected and Weighted.
 
@@ -258,7 +256,7 @@ In a weighted graph, each edge is assigned a weight or cost.
 
 ### Graph representation
 
-There are two common way to represent Graph:
+There are two common way to represent graph:
   - Adjacency Matrix
   - Adjacency List
 
@@ -273,6 +271,7 @@ For Directed Graph we use tree possible values. 0, 1 or -1.
 Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O(V**2).
 
 Pro : Faster for dense Graph. Simpler for Weighted Graph.
+
 Con : Uses more space.
 
 ### Adjacency List
@@ -282,6 +281,7 @@ An adjacency list is an array A of separate lists. Each element of the array Ai 
 The space complexity of adjacency list is O(V + E) because in an adjacency list information is stored only for those edges that actually exist in the graph. In a lot of cases, where a matrix is sparse using an adjacency matrix may not be very useful. This is because using an adjacency matrix will take up a lot of space where most of the elements will be 0, anyway. In such cases, using an adjacency list is better.
 
 Pro : Faster and uses less space for Sparse graph.
+
 Con : Slower for dense graph.
 
 ### Basic Operations on Graph
