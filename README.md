@@ -291,3 +291,5 @@ Con : Slower for dense graph.
 - Detecting an edge
 - Finding neighbors of a vertex
 - Finding a path between two vertices
+
+### Graph Traversals:
