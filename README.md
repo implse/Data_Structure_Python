@@ -298,9 +298,21 @@ Con : Slower for dense graph.
 
 - Internally this Algorithm uses a Queue.
 
+We visit every vertex exactly once.
+We visit the neighbors the the neighbors of these new vertices and so on.
+
+Time complexity : O(V + E)
+Memory complexity is not good. We have to store a lot of references.
+
 #### Depth First Search
 
 - Internally this Algorithm uses a Stack.
+
+It explores as far as possible along each branch before backtracking.
+
+Time complexity : O(V + E)
+Memory complexity is a bit better than BFS.
+
 
 ##### Applications
 
