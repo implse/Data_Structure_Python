@@ -294,5 +294,16 @@ Con : Slower for dense graph.
 
 ### Graph Traversals:
 
-- Breadth First Search. Internally this Algorithm uses a Queue.
-- Depth First Search. Internally this Algorithm uses a Stack.
+#### Breadth First Search
+
+- Internally this Algorithm uses a Queue.
+
+#### Depth First Search
+
+- Internally this Algorithm uses a Stack.
+
+##### Applications
+
+- Kosaraju Algorithm.
+- Detecting cycle. Checking whether a graph is a DAG or not.
+- Generating mazes or finding way out of the maze.
