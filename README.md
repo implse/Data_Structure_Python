@@ -294,4 +294,5 @@ Con : Slower for dense graph.
 
 ### Graph Traversals:
 
-- Breadth First Search
+- Breadth First Search. Internally this Algorithm uses a Queue.
+- Depth First Search. Internally this Algorithm uses a Stack.
