@@ -302,7 +302,7 @@ We visit every vertex exactly once.
 We visit the neighbors the the neighbors of these new vertices and so on.
 
 Time complexity : O(V + E)
-Memory complexity is not good. We have to store a lot of references.
+Memory complexity is not good. We have to store a lot of references. O(N)
 
 #### Depth First Search
 
@@ -311,7 +311,7 @@ Memory complexity is not good. We have to store a lot of references.
 It explores as far as possible along each branch before backtracking.
 
 Time complexity : O(V + E)
-Memory complexity is a bit better than BFS.
+Memory complexity is a bit better than BFS. O(log N)
 
 
 ##### Applications
@@ -319,3 +319,30 @@ Memory complexity is a bit better than BFS.
 - Kosaraju Algorithm.
 - Detecting cycle. Checking whether a graph is a DAG or not.
 - Generating mazes or finding way out of the maze.
+
+## Shortest Path Algorithm
+
+- Finding a path between two vertices in a graph such that the sum of the weights of its edges is minimized.
+
+- Dijkstra algorithm
+- Floyd Warshall algorithm
+- A* Search
+
+## Dijkstra algorithm
+
+- It was constructed by computer scientist Edsger Dijkstra in 1956.
+- This is the fastest know single source shortest path algorithm for arbitrary directed graphs with unbounded non-negative weights.
+
+- It uses greedy method: Always pick the next closest vertex to the source.
+- It uses priority queue lo store unvisited vertices by distance from s.
+- It does not work with negative weights.
+
+#### Difference between Unweighted Shortest Path and Dijkstra's Algorithm
+
+- To represent weights in the adjacency list, each vertex contains the weights of the edges (in addition to their identifier).
+
+- Instead of ordinary queue we use priority queue (distances are the priorities) and the vertex with the smallest distance is selected for processing.
+
+- The distance to a vertex is calculated by the sum of the weights of the edges on the path from the source to that vertex.
+
+- We update the distances in case the newly computed distance is smaller than the old distance which we have already computed.
