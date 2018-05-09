@@ -350,5 +350,7 @@ Memory complexity is a bit better than BFS. O(log N)
 Time Complexity : O(V * Log(V) + E)
 
 1 - Find the cheapest unvisited node reachable.
+
 2 - Mark it as visited and keep track on which nodes you can visit from it.
+
 3 - Repeat.
