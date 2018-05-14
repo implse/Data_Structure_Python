@@ -268,7 +268,9 @@ A binary matrix is a matrix in which the cells can have only one of two possible
 
 For Directed Graph we use tree possible values. 0, 1 or -1.
 
-Adjacency matrix provides constant time access (O(1) ) to determine if there is an edge between two nodes. Space complexity of the adjacency matrix is O(V**2).
+Adjacency matrix provides constant time access O(1) to determine if there is an edge between two nodes.
+
+Space complexity of the adjacency matrix is O(V**2).
 
 Pro : Faster for dense Graph. Simpler for Weighted Graph.
 
