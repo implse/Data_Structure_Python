@@ -2,7 +2,7 @@ import sys
 import heapq
 
 class Edge(object):
-    def __init__(self, startVertex, targetVertex):
+    def __init__(self, weight, startVertex, targetVertex):
         self.weight = weight
         self.startVertex = startVertex
         self.targetVertex = targetVertex
@@ -30,7 +30,7 @@ class Dijkstra(object):
         startVertex.minDistance = 0
         heapq.heappush(q, startVertex)
 
-        while len(q) > O:
+        while len(q) > 0:
             actualVertex = heapq.heappop(q)
             for edge in actualVertex.adjacencyList:
                 u = edge.startVertex
@@ -43,11 +43,11 @@ class Dijkstra(object):
                     heapq.heappush(q, v)
 
     def getShortestPath(self, targetVertex):
-        print("Shortest path to vertex is : "", targetVertex.minDistance)
+        print("Shortest path to vertex is : ", targetVertex.minDistance)
 
         node = targetVertex
         while node is not None:
-            print("%s " % node.value)
+            print("%s " % node.name)
             node = node.predecessor
 
 # Test
@@ -76,3 +76,26 @@ edge13 = Edge(13, node6, node7)
 edge14 = Edge(3, node3, node4)
 edge15 = Edge(11, node3, node7)
 edge16 = Edge(9, node4, node7)
+
+
+node1.adjacencyList.append(edge1)
+node1.adjacencyList.append(edge2)
+node1.adjacencyList.append(edge3)
+node2.adjacencyList.append(edge4)
+node2.adjacencyList.append(edge5)
+node2.adjacencyList.append(edge6)
+node8.adjacencyList.append(edge7)
+node8.adjacencyList.append(edge8)
+node5.adjacencyList.append(edge9)
+node5.adjacencyList.append(edge10)
+node5.adjacencyList.append(edge11)
+node6.adjacencyList.append(edge12)
+node6.adjacencyList.append(edge13)
+node3.adjacencyList.append(edge14)
+node3.adjacencyList.append(edge15)
+node4.adjacencyList.append(edge16)
+
+vertexList = (node1, node2, node3, node4, node5, node6, node7, node8)
+dj = Dijkstra()
+dj.calculateShortestPath(vertexList, node1)
+dj.getShortestPath(node7)
