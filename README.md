@@ -278,7 +278,7 @@ Con : Uses more space.
 
 ### Adjacency List
 
-An adjacency list is an array A of separate lists. Each element of the array Ai is a list, which contains all the vertices that are adjacent to vertex i.
+An adjacency list is an array of separate lists. Each element of the array is a list, which contains all the vertices that are adjacent to vertex i.
 
 The space complexity of adjacency list is O(V + E) because in an adjacency list information is stored only for those edges that actually exist in the graph. In a lot of cases, where a matrix is sparse using an adjacency matrix may not be very useful. This is because using an adjacency matrix will take up a lot of space where most of the elements will be 0, anyway. In such cases, using an adjacency list is better.
 
@@ -288,11 +288,11 @@ Con : Slower for dense graph.
 
 ### Basic Operations on Graph
 
-- Adding an edge
-- Deleting an edge
-- Detecting an edge
-- Finding neighbors of a vertex
-- Finding a path between two vertices
+- Adding an edge.
+- Deleting an edge.
+- Detecting an edge.
+- Finding neighbors of a vertex.
+- Finding a path between two vertices.
 
 ### Graph Traversals:
 
@@ -319,8 +319,11 @@ Memory complexity is a bit better than BFS. O(log N)
 ##### Applications
 
 - Kosaraju Algorithm.
-- Detecting cycle. Checking whether a graph is a DAG or not.
+- Detecting cycle. Checking whether a graph is a DAG (Directed Acyclic Graph)or not.
 - Generating mazes or finding way out of the maze.
+
+DAG : Directed Acyclic Graph is a finite directed graph with no directed cycles.
+
 
 ## Shortest Path Algorithm
 
