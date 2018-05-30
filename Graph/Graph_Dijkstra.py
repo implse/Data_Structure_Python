@@ -43,7 +43,7 @@ class Dijkstra(object):
                     heapq.heappush(q, v)
 
     def getShortestPath(self, targetVertex):
-        print("Shortest path to vertex is : ", targetVertex.minDistance)
+        print("Shortest path to vertex is :", targetVertex.minDistance)
 
         node = targetVertex
         while node is not None:

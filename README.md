@@ -359,3 +359,7 @@ Time Complexity : O(V * Log(V) + E)
 2 - Mark it as visited and keep track on which nodes you can visit from it.
 
 3 - Repeat.
+
+Dijkstra algorithm find the fastest path.
+
+Breadth-first search find the path with the fewest segments.
