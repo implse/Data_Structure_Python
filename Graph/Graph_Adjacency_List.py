@@ -33,7 +33,7 @@ class Graph(object):
         for key in sorted(list(self.vertices.keys())):
             print(key + str(self.vertices[key].neighbors))
 
-# Test
+# Test 1
 g = Graph()
 a = Vertex('A')
 g.add_vertex(a)

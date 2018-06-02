@@ -215,7 +215,7 @@ Two possible options: We look for the largest Node in the left subtree (Predeces
 
 Graphs are mathematical structures that represent pairwise relationships between objects. A graph is an abstract data structure that represents the relationship between various objects.
 
-A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between vertices called Edges.
+A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between vertices called Edges or Arcs.
 
 
 There are tree types of graphs: Directed, Undirected and Weighted.
@@ -256,9 +256,10 @@ In a weighted graph, each edge is assigned a weight or cost.
 
 ### Graph representation
 
-There are two common way to represent graph:
+There are three common way to represent graph:
   - Adjacency Matrix
   - Adjacency List
+  - Edge List
 
 ### Adjacency Matrix
 
