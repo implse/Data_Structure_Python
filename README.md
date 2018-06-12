@@ -211,6 +211,26 @@ Two possible options: We look for the largest Node in the left subtree (Predeces
 - Delete predecessor.
 
 
+## Binary Heap
+
+A Binary Heap is a specialized Binary Search Tree data structure that satisfies the heap property.
+
+A Binary Heap is define as a Binary Tree with two additionnal properties
+
+### Heap ordering property :
+
+- A Binary Heap is a complete Binary Tree. Every level except possibly the last is completely filled.
+
+### Heap ordering property :
+
+- Min heap : Each node is greater than or equal to its parent(min value is root).
+
+- Max heap : Each node is less than or equal to its parent(max value is root).
+
+
+
+
+
 ## Graph
 
 Graphs are mathematical structures that represent pairwise relationships between objects. A graph is an abstract data structure that represents the relationship between various objects.
