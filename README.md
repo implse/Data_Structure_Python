@@ -224,11 +224,40 @@ A Binary Heap is define as a Binary Tree with two additional properties.
 ### Heap ordering property :
 
 - Min heap : Each node is greater than or equal to its parent(min value is root).
-
 - Max heap : Each node is less than or equal to its parent(max value is root).
 
+Heaps are not sorted, considered "partially ordered".
 
+### Priority Queues:
 
+- Almost always implement with a heap.
+- Element with smaller numbers are higher priority.
+- Element are inserted in O(log n) time.
+- Ordering happens with each insertion, so the cost of ordering is distributed across insertion instead of in one big chunk.
+
+#### Applications
+
+Prioritizing data packets in routers.
+Tracking unexplored routes in path-finding algorithms.
+Bayesian spam filtering.
+Data compression.
+OS load Balancing, interrupt handling.
+
+#### Array representation
+
+Place values into array following level-order traversal.
+
+- Left child index : 2n + 1
+- Right child index : 2n + 2
+- Parent index : (n - 1) / 2
+
+Array implementation use less memory.(no node class require)
+Can sort an array in-place.(Heapsort)
+
+Insert element :
+- Add element to end.
+- Shift up or bubble up.
+- Swap with parent until fulfills the ordering property.
 
 
 ## Graph
