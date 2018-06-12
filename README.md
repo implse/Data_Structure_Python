@@ -215,9 +215,9 @@ Two possible options: We look for the largest Node in the left subtree (Predeces
 
 A Binary Heap is a specialized Binary Search Tree data structure that satisfies the heap property.
 
-A Binary Heap is define as a Binary Tree with two additionnal properties
+A Binary Heap is define as a Binary Tree with two additional properties.
 
-### Heap ordering property :
+### Heap property :
 
 - A Binary Heap is a complete Binary Tree. Every level except possibly the last is completely filled.
 
