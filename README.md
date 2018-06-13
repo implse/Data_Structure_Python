@@ -175,20 +175,22 @@ If the Tree become unbalanced then the operations running times can be reduced t
 
 ### Binary Search Tree Traversals:
 
+#### Depth First Search :
 
-3 main Tree Traversal Method :
+- 2 methods for DFS recursive or iterative.
+- use a stack for the iterative method.
 
-- InOrder : visit the Left SubTree then the Root the the Right SubTree recursively.
-- PreOrder : visit the Root then Left SubTree then the Right SubTree recursively.
-- PostOrder : visit the Left SubTree then the right Sub Tree and the Root recursively.
+Depth First Search Traversal Methods :
 
-Depth First Search Traversal :
-- InOrder
-- PreOrder
-- PostOrder
+- __InOrder__ : visit the Left SubTree then the Root the the Right SubTree recursively.
+- __PreOrder__ : visit the Root then Left SubTree then the Right SubTree recursively.
+- __PostOrder__ : visit the Left SubTree then the right Sub Tree and the Root recursively.
 
-Bread First Search Traversal :
-- Level Order
+
+#### Breadth First Search Traversal :
+
+- BFS use priority queue.
+- Level Order Traversal.
 
 
 ### Delete a Node in a Binary Search Tree
@@ -243,6 +245,9 @@ Bayesian spam filtering.
 Data compression.
 OS load Balancing, interrupt handling.
 
+Height = log(n + 1) - 1
+ex : if a Tree has 15 node : log(15 + 1) - 1 = 4 - 1 = 3
+
 #### Array representation
 
 Place values into array following level-order traversal.
@@ -255,9 +260,38 @@ Array implementation use less memory.(no node class require)
 Can sort an array in-place.(Heapsort)
 
 Insert element :
-- Add element to end.
+- Insert at next available space.
 - Shift up or bubble up.
-- Swap with parent until fulfills the ordering property.
+- Swap with parent until fulfills the ordering property.(trickle up) Fix heap violation.
+
+Remove element :
+
+- Replace root with last element.
+- Shift down (aka sink).
+- Swap with smallest child(min) or largest child(max) until fulfills the ordering property.
+
+Other methods
+
+- peek : find-min or find-max.
+- size : return the numbers of elements
+
+## Building the heap
+
+- first we insert the data to the heap and we check wether the heap properties are met.
+- if the heap properties are violated, we reconstruct the heap in order to make it a valid heap.(heapify process)
+
+- it is O(N) process to construct a heap.
+- if heap properties are violated it takes O(loh N) to heapify.
+- inserting an item to the heap is just adding the data to the array with incremented index.
+
+
+
+## Heapify
+
+Input : an array usually unsorted, unordered.
+Output : an array that satisfies the heap property.
+
+
 
 
 ## Graph
