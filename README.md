@@ -287,19 +287,18 @@ Other methods
 
 ## Heapify
 
-Convert an array to Heap.
+heapify: create a heap out of given array of elements.
 
 Input : an array usually unsorted, unordered.
 Output : an array that satisfies the heap property.
 
+Balancing a heap is done by sift-up or sift-down operations (swapping elements which are out of order)
+
 ## Heapsort
 
-Heap sort algorithm is a sorting technique that is based exclusively upon a binary heap data structure. It involves finding the largest (maximum) element, and sorting it at the end of an unsorted collection. 
+Heap sort algorithm is a sorting technique that is based exclusively upon a binary heap data structure. It involves finding the largest (maximum) element, and sorting it at the end of an unsorted collection.
 
-
-
-
-
+Python has a heapq module that implements a priority queue using a binary heap.
 
 
 ## Graph
