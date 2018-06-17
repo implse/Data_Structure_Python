@@ -285,11 +285,19 @@ Other methods
 - inserting an item to the heap is just adding the data to the array with incremented index.
 
 
-
 ## Heapify
+
+Convert an array to Heap.
 
 Input : an array usually unsorted, unordered.
 Output : an array that satisfies the heap property.
+
+## Heapsort
+
+Heap sort algorithm is a sorting technique that is based exclusively upon a binary heap data structure. It involves finding the largest (maximum) element, and sorting it at the end of an unsorted collection. 
+
+
+
 
 
 
