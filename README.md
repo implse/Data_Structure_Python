@@ -280,8 +280,8 @@ Other methods
 - first we insert the data to the heap and we check wether the heap properties are met.
 - if the heap properties are violated, we reconstruct the heap in order to make it a valid heap.(heapify process)
 
-- it is O(N) process to construct a heap.
-- if heap properties are violated it takes O(loh N) to heapify.
+- it is O(n) process to construct a heap.
+- if heap properties are violated it takes O(log n) to heapify.
 - inserting an item to the heap is just adding the data to the array with incremented index.
 
 
@@ -300,6 +300,8 @@ Heap sort algorithm is a sorting technique that is based exclusively upon a bina
 
 Python has a heapq module that implements a priority queue using a binary heap.
 
+Time Complexity: O(n log n)
+Space Complexity: O(n)
 
 ## Graph
 
