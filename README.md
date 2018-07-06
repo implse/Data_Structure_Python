@@ -310,9 +310,13 @@ An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Ve
 
 For every node, height of the left and right children differ by at most +-1.
 
+Balance Factor(Node) = Height(RightSubTree) - Height(LeftSubTree)
+
 Each node store its height.
 
 Height of a node: length of the longest path from it to a leaf.
+
+The running time of BST operations depends on the height of the binary search tree. The tree should be balanced in order to get the best performance.
 
 ## Graph
 
