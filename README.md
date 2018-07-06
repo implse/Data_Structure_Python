@@ -303,6 +303,17 @@ Python has a heapq module that implements a priority queue using a binary heap.
 Time Complexity: O(n log n)
 Space Complexity: O(n)
 
+
+# AVL Tree
+
+An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis. 1962
+
+For every node, height of the left and right children differ by at most +-1.
+
+Each node store its height.
+
+Height of a node: length of the longest path from it to a leaf.
+
 ## Graph
 
 Graphs are mathematical structures that represent pairwise relationships between objects. A graph is an abstract data structure that represents the relationship between various objects.
