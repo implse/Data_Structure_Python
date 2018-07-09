@@ -69,7 +69,7 @@ Linked List implementation of a Stack.
 
 A Queue is a data structure used for storing data similar to Stack.
 
-The first element to be inserted is the first one Lo be deleted. First in First
+The first element to be inserted is the first one to be deleted. First in First
 out (FIFO).
 
 Linked List implementation of a Queue.
@@ -178,7 +178,7 @@ If the Tree become unbalanced then the operations running times can be reduced t
 #### Depth First Search :
 
 - 2 methods for DFS recursive or iterative.
-- use a stack for the iterative method.
+- Use a stack for the iterative method.
 
 Depth First Search Traversal Methods :
 
@@ -287,7 +287,7 @@ Other methods
 
 ## Heapify
 
-heapify: create a heap out of given array of elements.
+Create a heap out of given array of elements.
 
 Input : an array usually unsorted, unordered.
 Output : an array that satisfies the heap property.
@@ -306,7 +306,7 @@ Space Complexity: O(n)
 
 # AVL Tree
 
-An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis. 1962
+An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis.(1962)
 
 For every node, height of the left and right children differ by at most +-1.
 
