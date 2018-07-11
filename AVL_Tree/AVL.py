@@ -9,6 +9,16 @@ class AVL(object):
     def __init__(self):
         self.root = None
 
+    def calcHeight(self, node):
+        if not node:
+            return -1
+        return node.height
+
+    def calcBalance(self, node):
+        if not node:
+            return 0
+        return self.calcHeight(node.leftChild) - self.calcHeight(node.rightChild)
+
     def insert(self, data):
         self.root = self.insertNode(data, self.root)
 
@@ -25,15 +35,26 @@ class AVL(object):
 
         return self.settleViolation(data, node)
 
-    def calcHeight(self, node):
-        if not node:
-            return -1
-        return node.height
+    def settleViolation(self, data, node):
+        balance = self.calcBalance(node)
+        if balance > 1 and data < node.leftChild.data:
+            print("Left left heavy")
+            return self.rotateRight(node)
 
-    def calcBalance(self, node):
-        if not node:
-            return 0
-        return self.calcHeight(node.leftChild) - calcHeight(node.right)
+        if balance < -1 and data > node.rightChild.data:
+            print("Right right heavy")
+            return self.rotateLeft(node)
+
+        if balance > 1 and data > node.leftChild.data:
+            print("Left right heavy")
+            node.leftChild = self.rotateLeft(node.leftChild)
+            return self.rightChild(node)
+
+        if balance < -1 and data > node.rightChild.data:
+            print("Right left heavy")
+            node.rightChild = self.rotateRight(node.rightChild)
+            return self.rotateLeft(node)
+        return node
 
     def rotateRight(self, node):
         print("rotating to the right on node", node.data)
@@ -54,3 +75,24 @@ class AVL(object):
         node.height = max(self.calcHeight(node.leftChild), self.calcHeight(node.rightChild)) + 1
         tempRightChild.height = max(self.calcHeight(tempRightChild.leftChild), self.calcHeight(tempRightChild.rightChild)) + 1
         return tempRightChild
+
+    def traverse(self):
+        if self.root:
+            self.traverseInOrder(self.root)
+
+    def traverseInOrder(self, node):
+        if node.leftChild:
+            self.traverseInOrder(node.leftChild)
+
+        print("%s " % node.data)
+
+        if node.rightChild:
+            self.traverseInOrder(node.rightChild)
+
+# Test
+
+avl = AVL()
+avl.insert(10)
+avl.insert(20)
+avl.insert(30)
+avl.traverse()
