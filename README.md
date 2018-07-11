@@ -303,10 +303,20 @@ Python has a heapq module that implements a priority queue using a binary heap.
 Time Complexity: O(n log n)
 Space Complexity: O(n)
 
-
 # AVL Tree
 
 An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis.(1962)
+
+This type of tree will adjust itself in order to maintain a low (logarithmic) height allowing for faster operations such as insertions and deletions.
+
+AVL Tree Time Complexity :
+
+|Operation                   |Average  |  Worst  |
+|----------------------------|---------|---------
+|Search                      |O(log n) |O(log n) |
+|Insert                      |O(log n) |O(log n) |
+|Delete                      |O(log n) |O(log n) |
+|Remove                      |O(log n) |O(log n) |
 
 For every node, height of the left and right children differ by at most +-1.
 
@@ -317,6 +327,16 @@ Each node store its height.
 Height of a node: length of the longest path from it to a leaf.
 
 The running time of BST operations depends on the height of the binary search tree. The tree should be balanced in order to get the best performance.
+
+### Tree Rotations
+
+The secret ingredient to most AVL Tree (Balanced Binary Search Tree) algorithms is the clever usage of a tree invariant and tree rotations.
+
+A tree invariant is a property or rule you impose on your tree that it must meet after every operation. To ensure that the invariant is always satisfied a series of tree rotations are normally applied.
+
+#### InOrder invariance
+
+The tree rotation renders the inorder traversal of the binary tree invariant. This implies the order of the elements are not affected when a rotation is performed in any part of the tree.
 
 ## Graph
 
