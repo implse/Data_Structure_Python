@@ -284,6 +284,15 @@ Other methods
 - if heap properties are violated it takes O(log n) to heapify.
 - inserting an item to the heap is just adding the data to the array with incremented index.
 
+### Add value to the heap :
+  - Insert at next available space.
+  - Trickle up or fixUp.
+
+### Remove value from a heap:
+  - Remove the root.
+  - Replace with the last element.
+  - Trickle down or fixDown.
+
 
 ## Heapify
 
@@ -329,7 +338,7 @@ Height of a node: length of the longest path from it to a leaf.
 The running time of BST operations depends on the height of the binary search tree. The tree should be balanced in order to get the best performance.
 
 ### Tree Rotations
- 
+
 The secret ingredient to most AVL Tree (Balanced Binary Search Tree) algorithms is the clever usage of a tree invariant and tree rotations.
 
 A tree invariant is a property or rule you impose on your tree that it must meet after every operation. To ensure that the invariant is always satisfied a series of tree rotations are normally applied.
