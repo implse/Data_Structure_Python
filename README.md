@@ -121,7 +121,7 @@ __Size__ : Number of nodes in the tree.
 
 ### Binary Tree
 
-__Binary Tree__ is a specialized form of tree with two child (left child and right Child). It is simply a representation of data in Tree structure
+__Binary Tree__ is a specialized form of tree with two child (left child and right child). It is simply a representation of data in Tree structure
 
 
 Strict Binary Tree : each node has exactly two children or no children.

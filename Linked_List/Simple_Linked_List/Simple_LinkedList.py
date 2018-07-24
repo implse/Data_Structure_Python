@@ -1,15 +1,16 @@
-# Definition for singly-linked list:
-class ListNode(object):
+# SINGLY LINKED LIST
+
+class Node(object):
   def __init__(self, x):
     self.value = x
     self.next = None
 
-# Create a linked list from Array
+# Create a LinkedList from Array
 def LinkedList_From_List(a):
-    head = ListNode(a[0])
+    head = Node(a[0])
     current = head
     for item in a[1:]:
-        current.next = ListNode(item)
+        current.next = Node(item)
         current = current.next
     return head
 
@@ -22,7 +23,7 @@ def List_from_LinkedList(l):
         current = current.next
     return out
 
-# Reverse a Linked List : Iterative Method
+# Reverse a LinkedList : Iterative Method
 def Reverse_LinkedList(l):
     current = l
     next_node = None
@@ -34,7 +35,7 @@ def Reverse_LinkedList(l):
         current = next_node
     return previous_node
 
-# Reverse a linked List : Recursive Method
+# Reverse a LinkedList : Recursive Method
 def Reverse_Recursive_LinkedList(l, prev = None):
     current = l
     if not current:
@@ -45,14 +46,14 @@ def Reverse_Recursive_LinkedList(l, prev = None):
     current = next_node
     return Reverse_Recursive_LinkedList(current, prev)
 
-# Print a Linked List : Iterative Method
+# Print a LinkedList : Iterative Method
 def Print_LinkedList(l):
     current = l
     while current != None:
         print(current.value)
         current = current.next
 
-# Print a Linked List : Recursive Method
+# Print a LinkedList : Recursive Method
 def Print_Recursive_LinkedList(l):
     current = l
     if not current:
@@ -60,7 +61,7 @@ def Print_Recursive_LinkedList(l):
     print(current.value)
     Print_Recursive_LinkedList(current.next)
 
-# Merge two sorted Linked ListNode
+# Merge two sorted LinkedList
 def merge_2_sorted_LinkedList(l1, l2):
     dummy = Node()
     tail = dummy
