@@ -1,4 +1,6 @@
-# Create a linked list from Array
+# LINKED LIST UTILITY
+
+# Create a LinkedList from Array
 def LinkedList_From_List(a):
 	head = Singly_LinkedList()
 	for i in a:
@@ -14,7 +16,7 @@ def List_from_LinkedList(l):
         current = current.next
     return out
 
-# Reverse a Linked List : Iterative Method
+# Reverse a LinkedList : Iterative Method
 def Reverse_LinkedList(l):
     current = l.head
     next_node = None

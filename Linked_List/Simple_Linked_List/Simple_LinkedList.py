@@ -1,4 +1,4 @@
-# SINGLY LINKED LIST
+# SIMPLE SINGLY LINKED LIST
 
 class Node(object):
   def __init__(self, x):

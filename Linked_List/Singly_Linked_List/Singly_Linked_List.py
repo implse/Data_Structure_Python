@@ -1,3 +1,5 @@
+# SINGLY LINKED LIST
+
 class Node(object):
 	def __init__(self, value):
 		self.value = value
@@ -9,7 +11,7 @@ class Singly_LinkedList(object):
 		self.tail = None
 		self.size = 0
 
-	# Add value to head of list
+	# Add value to head
 	def add_to_head(self, value):
 		new_node = Node(value)
 		if self.head:
@@ -20,7 +22,7 @@ class Singly_LinkedList(object):
 			self.tail = new_node
 		self.size += 1
 
-	# Add value to tail of list
+	# Add value to tail
 	def add_to_tail(self, value):
 		new_node = Node(value)
 		if self.tail:
@@ -31,7 +33,7 @@ class Singly_LinkedList(object):
 			self.tail = new_node
 		self.size += 1
 
-	# Add value at specific index in list
+	# Add value at specific index
 	def add_at(self, value, index):
 		new_node = Node(value)
 		previous = None
@@ -64,7 +66,7 @@ class Singly_LinkedList(object):
 			current = current.next
 		return False
 
-	# Find if value is in list: return true or false
+	# Find if value is in LinkedList: return true or false
 	def find(self, value):
 		current = self.head
 		while current:
@@ -73,7 +75,7 @@ class Singly_LinkedList(object):
 			current = current.next
 		return False
 
-	# Reverse the link list
+	# Reverse the LinkedList
 	def reverse(self):
 		current = self.head
 		next = None
@@ -86,7 +88,7 @@ class Singly_LinkedList(object):
 			self.head = previous
 		return self.head
 
-	# Create list from linkedList
+	# Create list from LinkedList
 	def to_list(self):
 		l = []
 		current = self.head

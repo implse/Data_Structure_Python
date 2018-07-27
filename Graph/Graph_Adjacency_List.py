@@ -1,3 +1,5 @@
+# GRAPH : ADJACENCY LIST
+
 class Vertex(object):
     def __init__(self, n):
         self.name = n
@@ -33,7 +35,7 @@ class Graph(object):
         for key in sorted(list(self.vertices.keys())):
             print(key + str(self.vertices[key].neighbors))
 
-# Test 1
+# Test
 g = Graph()
 a = Vertex('A')
 g.add_vertex(a)
