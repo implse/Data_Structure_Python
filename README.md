@@ -26,14 +26,14 @@ A linked List is a data structure used for storing collections of data.
 
 ### Linked List vs Array
 
-Linked List are preferable:
+### Advantages
 
 - You need Insertion / Deletion in the list to be extremely fast.
 - You Insert / Delete items in the middle of the list.
 - You can’t evaluate the size of the list, it needs to grow
 or shrink throughout the execution.
 
-Array are preferable over Linked List:
+### Disadvantages
 
 - You frequently need random, unordered access to the data.
 - You need extreme performance to access the items.
