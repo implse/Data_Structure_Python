@@ -15,7 +15,7 @@ A linked List is a data structure used for storing collections of data.
 |Insertion/Deletion in middle|O(n)   |
 |Access Time                 |O(n)   |
 
-## Basic Operations on Linked List
+### Basic Operations on Linked List
 
 - Add value to Head/Tail
 - Add value at specific index
@@ -24,20 +24,23 @@ A linked List is a data structure used for storing collections of data.
 - Create list from Linked List
 - Reverse the Linked List
 
-## Linked List vs Array
+### Linked List vs Array
 
 Linked List are preferable:
+
 - You need Insertion / Deletion in the list to be extremely fast.
 - You Insert / Delete items in the middle of the list.
 - You can’t evaluate the size of the list, it needs to grow
 or shrink throughout the execution.
 
 Array are preferable over Linked List:
+
 - You frequently need random, unordered access to the data.
 - You need extreme performance to access the items.
 - The number of items doesn't change during execution, so you can easily allocate contiguous space of computer memory.
 
 ## Stack
+
 A stack is a simple data structure used for storing data.
 
 The last element inserted is the first one to be deleted. Last in, First out (LIFO).
@@ -100,29 +103,28 @@ Tree is an example of non-linear data structure.
 
 ### Glossary
 
-__Root__ : top most node.
+__Root:__ top most node.
 
 __Edge__ : refer to the link from parent to child.
 
-__Siblings__ : Children of the same parent.
+__Siblings:__ Children of the same parent.
 
-__Leaf__ : A node with no children.
+__Leaf:__ A node with no children.
 
-__Height(Tree)__ : The height of a tree is the length of the path from the root to the deepest node in the tree.
+__Height (Tree):__ The height of a tree is the length of the path from the root to the deepest node in the tree.
 
-__Height(Node)__ : The height of a node is the length of the path from that node to the deepest node. Or is the number of layers it contains.
+__Height (Node):__ The height of a node is the length of the path from that node to the deepest node. Or is the number of layers it contains.
 
-__Level__ : Number of edges between the node and the root + 1.
+__Level:__ Number of edges between the node and the root + 1.
 
-__Depth__ : Number of edges between the node and the root.
+__Depth:__ Number of edges between the node and the root.
 
-__Size__ : Number of nodes in the tree.
+__Size:__ Number of nodes in the tree.
 
 
-### Binary Tree
+## Binary Tree
 
-__Binary Tree__ is a specialized form of tree with two child (left child and right child). It is simply a representation of data in Tree structure
-
+Binary Tree is a specialized form of tree with two child (left child and right child). It is simply a representation of data in Tree structure
 
 Strict Binary Tree : each node has exactly two children or no children.
 
@@ -132,19 +134,19 @@ The number of nodes n in a full binary tree is (2^h + 1) - 1.
 
 Since, there are h levels we need to add all nodes at each level [ 2^0 + 2^1 + 2^2 + ... + 2^h = (2^h + 1) - 1].
 
-### Binary Search Tree
+## Binary Search Tree
 
 Always sorted by implementation.
 
-__Binary Search Tree (BST or Ordered Binary Tree)__ is a special type of Binary Tree that follows following condition:
+Binary Search Tree (BST or Ordered Binary Tree) is a special type of Binary Tree that follows following condition:
 
-- left child node is smaller than its parent Node.
-- right child node is greater than its parent Node.
+- Left child node is smaller than its parent Node.
+- Right child node is greater than its parent Node.
 
 
 No duplicate Keys.
 
-__Advantages__ :
+### Advantages
 
 - Fast search, insertion, deletion especially when balanced.
 
@@ -173,21 +175,21 @@ Worst case scenarios :
 If the Tree become unbalanced then the operations running times can be reduced to O(n).
 
 
-### Binary Search Tree Traversals:
+### Binary Search Tree Traversals
 
-#### Depth First Search :
+#### Depth First Search
 
 - 2 methods for DFS recursive or iterative.
 - Use a stack for the iterative method.
 
-Depth First Search Traversal Methods :
+### Depth First Search Traversal
 
-- __InOrder__ : visit the Left SubTree then the Root the the Right SubTree recursively.
-- __PreOrder__ : visit the Root then Left SubTree then the Right SubTree recursively.
-- __PostOrder__ : visit the Left SubTree then the right Sub Tree and the Root recursively.
+- __InOrder:__ visit the Left SubTree then the Root the the Right SubTree recursively.
+- __PreOrder:__ visit the Root then Left SubTree then the Right SubTree recursively.
+- __PostOrder:__ visit the Left SubTree then the right Sub Tree and the Root recursively.
 
 
-#### Breadth First Search Traversal :
+### Breadth First Search Traversal
 
 - BFS use priority queue.
 - Level Order Traversal.
@@ -219,18 +221,18 @@ A Binary Heap is a specialized Binary Search Tree data structure that satisfies 
 
 A Binary Heap is define as a Binary Tree with two additional properties.
 
-### Heap property :
+### Heap property
 
 - A Binary Heap is a complete Binary Tree. Every level except possibly the last is completely filled.
 
-### Heap ordering property :
+### Heap ordering property
 
 - Min heap : Each node is greater than or equal to its parent(min value is root).
 - Max heap : Each node is less than or equal to its parent(max value is root).
 
 Heaps are not sorted, considered "partially ordered".
 
-### Priority Queues:
+### Priority Queues
 
 - Almost always implement with a heap.
 - Element with smaller numbers are higher priority.
@@ -275,7 +277,7 @@ Other methods
 - peek : find-min or find-max.
 - size : return the numbers of elements
 
-## Building the heap
+## Building the Heap
 
 - first we insert the data to the heap and we check wether the heap properties are met.
 - if the heap properties are violated, we reconstruct the heap in order to make it a valid heap.(heapify process)
@@ -284,11 +286,13 @@ Other methods
 - if heap properties are violated it takes O(log n) to heapify.
 - inserting an item to the heap is just adding the data to the array with incremented index.
 
-### Add value to the heap :
+### Add value to the Heap
+
   - Insert at next available space.
   - Trickle up or fixUp.
 
-### Remove value from a heap:
+### Remove value from a Heap
+
   - Remove the root.
   - Replace with the last element.
   - Trickle down or fixDown.
@@ -298,8 +302,8 @@ Other methods
 
 Create a heap out of given array of elements.
 
-Input : an array usually unsorted, unordered.
-Output : an array that satisfies the heap property.
+Input: an array usually unsorted, unordered.
+Output: an array that satisfies the heap property.
 
 Balancing a heap is done by sift-up or sift-down operations (swapping elements which are out of order)
 
@@ -318,7 +322,7 @@ An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Ve
 
 This type of tree will adjust itself in order to maintain a low (logarithmic) height allowing for faster operations such as insertions and deletions.
 
-AVL Tree Time Complexity :
+AVL Tree Time Complexity:
 
 |Operation                   |Average  |  Worst  |
 |----------------------------|---------|---------
@@ -358,14 +362,13 @@ There are tree types of graphs: Directed, Undirected and Weighted.
 
 #### Vocabulary
 
-##### Edges :
-Represent the connection between two vertices.
-##### Vertices :
-Nodes in the graph
-##### Path :
-A sequence of connected vertices.
-##### Cycles :
-A path that is cyclical.
+__Edges:__ Represent the connection between two vertices.
+
+__Vertices:__ Nodes in the graph.
+
+__Path:__ A sequence of connected vertices.
+
+__Cycles:__ A path that is cyclical.
 
 
 ### Applications
@@ -381,21 +384,21 @@ A path that is cyclical.
 
 ### Type of Graph
 
-#### Undirected Graph :
+#### Undirected Graph
 An undirected graph is a graph in which all the edges are bi-directional i.e. the edges do not point in any specific direction.
 
-#### Directed Graph :
+#### Directed Graph
 A directed graph is a graph in which all the edges are uni-directional i.e. the edges point in a single direction.
 
-#### Weighted Graph :
+#### Weighted Graph
 In a weighted graph, each edge is assigned a weight or cost.
 
 ### Graph representation
 
 There are three common way to represent graph:
-  - Adjacency Matrix
-  - Adjacency List
-  - Edge List
+  - Adjacency Matrix.
+  - Adjacency List.
+  - Edge List.
 
 ### Adjacency Matrix
 
@@ -409,9 +412,9 @@ Adjacency matrix provides constant time access O(1) to determine if there is an 
 
 Space complexity of the adjacency matrix is O(V**2).
 
-Pro : Faster for dense Graph. Simpler for Weighted Graph.
+__Pro:__ Faster for dense Graph. Simpler for Weighted Graph.
 
-Con : Uses more space.
+__Con:__ Uses more space.
 
 ### Adjacency List
 
@@ -431,7 +434,7 @@ Con : Slower for dense graph.
 - Finding neighbors of a vertex.
 - Finding a path between two vertices.
 
-### Graph Traversals:
+### Graph Traversals
 
 #### Breadth First Search
 
@@ -450,6 +453,7 @@ Memory complexity is not good. We have to store a lot of references. O(N)
 It explores as far as possible along each branch before backtracking.
 
 Time complexity : O(V + E)
+
 Memory complexity is a bit better than BFS. O(log N)
 
 
@@ -490,6 +494,8 @@ DAG : Directed Acyclic Graph is a finite directed graph with no directed cycles.
 - We update the distances in case the newly computed distance is smaller than the old distance which we have already computed.
 
 Time Complexity : O(V * Log(V) + E)
+
+__Pseudo code__
 
 1 - Find the cheapest unvisited node reachable.
 
