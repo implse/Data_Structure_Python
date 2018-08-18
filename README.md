@@ -103,9 +103,9 @@ Tree is an example of non-linear data structure.
 
 ### Glossary
 
-__Root:__ top most node.
+__Root:__ Top most node.
 
-__Edge__ : refer to the link from parent to child.
+__Edge__ : Refer to the link from parent to child.
 
 __Siblings:__ Children of the same parent.
 
@@ -138,7 +138,7 @@ Since, there are h levels we need to add all nodes at each level [ 2^0 + 2^1 + 2
 
 Always sorted by implementation.
 
-Binary Search Tree (BST or Ordered Binary Tree) is a special type of Binary Tree that follows following condition:
+Binary Search Tree (BST or Ordered Binary Tree) is a special type of Binary Tree that follows these conditions:
 
 - Left child node is smaller than its parent Node.
 - Right child node is greater than its parent Node.
