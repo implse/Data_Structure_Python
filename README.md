@@ -170,9 +170,9 @@ No duplicate Keys.
 |Insert                      |O(log n) |
 |Delete                      |O(log n) |
 
-Worst case scenarios :
 
-If the Tree become unbalanced then the operations running times can be reduced to O(n).
+
+If the Tree become unbalanced then the operations running times can be reduced to O(n).(worst case)
 
 
 ### Binary Search Tree Traversals
