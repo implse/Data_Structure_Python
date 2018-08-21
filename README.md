@@ -177,12 +177,13 @@ If the Tree become unbalanced then the operations running times can be reduced t
 
 ### Binary Search Tree Traversals
 
-#### Depth First Search
-
-- 2 methods for DFS recursive or iterative.
-- Use a stack for the iterative method.
 
 ### Depth First Search Traversal
+
+- 2 methods for DFS recursive or iterative.
+- Iterative method use a stack (LIFO).
+- Recursive method use stack memory.
+
 
 - __InOrder:__ visit the Left SubTree then the Root the the Right SubTree recursively.
 - __PreOrder:__ visit the Root then Left SubTree then the Right SubTree recursively.
