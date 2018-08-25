@@ -228,8 +228,8 @@ A Binary Heap is define as a Binary Tree with two additional properties.
 
 ### Heap ordering property
 
-- Min heap : Each node is greater than or equal to its parent(min value is root).
-- Max heap : Each node is less than or equal to its parent(max value is root).
+- Min heap : Each node is greater than or equal to its parent. min value is root.
+- Max heap : Each node is less than or equal to its parent. max value is root.
 
 Heaps are not sorted, considered "partially ordered".
 
@@ -356,7 +356,15 @@ The tree rotation renders the inorder traversal of the binary tree invariant. Th
 
 Graphs are mathematical structures that represent pairwise relationships between objects. A graph is an abstract data structure that represents the relationship between various objects.
 
-A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between vertices called Edges or Arcs.
+A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between vertices called Edges or Links.
+
+Definition:
+
+  - G = (V, E)
+
+  V is a set of Vertices or Nodes.
+  E is a set of Edges or Links.
+
 
 
 There are tree types of graphs: Directed, Undirected and Weighted.
