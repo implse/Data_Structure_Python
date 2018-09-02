@@ -185,7 +185,7 @@ If the Tree become unbalanced then the operations running times can be reduced t
 - Recursive method use stack memory.
 
 
-- __InOrder:__ visit the Left SubTree then the Root the the Right SubTree recursively.
+- __InOrder:__ visit the Left SubTree then the Root then the Right SubTree recursively.
 - __PreOrder:__ visit the Root then Left SubTree then the Right SubTree recursively.
 - __PostOrder:__ visit the Left SubTree then the right Sub Tree and the Root recursively.
 
