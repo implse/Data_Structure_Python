@@ -46,14 +46,11 @@ A stack is a simple data structure used for storing data.
 The last element inserted is the first one to be deleted. Last in, First out (LIFO).
 
 
-Linked List implementation of a Stack.
-
-
 |Operation                   |Big O  |
 |----------------------------|-------|
 |Push value                  |O(1)   |
 |Pop value                   |O(1)   |
-|Size                        |O(1)   |
+
 
 
 ### Basic Operations on Stack
@@ -63,8 +60,8 @@ Linked List implementation of a Stack.
 ### Applications
 
 - Stack Memory.
-- Implementing function calls including recursion.
-- Depth-First Search graph algorithms can be implemented with stack (or recursion).
+- Implementing function calls (memory stack, recursion)
+- Depth-First Search algorithms can be implemented with stack (or recursion).
 - Finding Euler-Cycles in a graph.
 - Balancing symbols.
 
@@ -124,11 +121,11 @@ __Size:__ Number of nodes in the tree.
 
 ## Binary Tree
 
-Binary Tree is a specialized form of tree with two child (left child and right child). It is simply a representation of data in Tree structure
+Binary Tree is a specialized form of tree with two child (left child and right child). It is simply a representation of data in Tree structure.
 
 Strict Binary Tree : each node has exactly two children or no children.
 
-Full Binary Tree : each node has exactly two children and all leaf nodes.
+Full Binary Tree : each node has exactly two children and are all leaf nodes.
 
 The number of nodes n in a full binary tree is (2^h + 1) - 1.
 
@@ -317,7 +314,7 @@ Python has a heapq module that implements a priority queue using a binary heap.
 Time Complexity: O(n log n)
 Space Complexity: O(n)
 
-# AVL Tree
+## AVL Tree
 
 An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis.(1962)
 
