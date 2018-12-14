@@ -3,13 +3,7 @@
 import sys
 import heapq
 
-class Edge(object):
-    def __init__(self, weight, startVertex, targetVertex):
-        self.weight = weight
-        self.startVertex = startVertex
-        self.targetVertex = targetVertex
-
-class Vertex(object):
+class Node(object):
     def __init__(self, name):
         self.name = name
         self.visited = False
@@ -17,26 +11,32 @@ class Vertex(object):
         self.adjacencyList = list()
         self.minDistance = sys.maxsize
 
-    def __cmp__(self, otherVertex):
-        return self.cmp(self.minDistance, otherVertex.minDistance)
+    def __cmp__(self, otherNode):
+        return self.cmp(self.minDistance, otherNode.minDistance)
 
     def __lt__(self, other):
         selfPriority = self.minDistance
         otherPriority = other.minDistance
         return selfPriority < otherPriority
 
+class Edge(object):
+    def __init__(self, weight, startNode, targetNode):
+        self.weight = weight
+        self.startNode = startNode
+        self.targetNode = targetNode
+
 class Dijkstra(object):
-    def calculateShortestPath(self, vertexList, startVertex):
+    def calculateShortestPath(self, nodeList, startNode):
         q = list()
         heapq.heapify(q)
-        startVertex.minDistance = 0
-        heapq.heappush(q, startVertex)
+        startNode.minDistance = 0
+        heapq.heappush(q, startNode)
 
         while len(q) > 0:
-            actualVertex = heapq.heappop(q)
-            for edge in actualVertex.adjacencyList:
-                u = edge.startVertex
-                v = edge.targetVertex
+            actualNode = heapq.heappop(q)
+            for edge in actualNode.adjacencyList:
+                u = edge.startNode
+                v = edge.targetNode
                 newDistance = u.minDistance + edge.weight
 
                 if newDistance < v.minDistance:
@@ -44,180 +44,179 @@ class Dijkstra(object):
                     v.minDistance = newDistance
                     heapq.heappush(q, v)
 
-    def getShortestPath(self, targetVertex):
-        print("Shortest distance between vertex is :", targetVertex.minDistance)
+    def getShortestPath(self, startNode, targetNode):
+        print("Shortest distance between %s and %s is : %d" %(startNode.name, targetNode.name, targetNode.minDistance))
 
-        Vertex = targetVertex
-        while Vertex is not None:
-            print("%s " % Vertex.name)
-            Vertex = Vertex.predecessor
+        Path_from_start_to_end = list()
+        Node = targetNode
+        while Node is not None:
+            Path_from_start_to_end.append(Node.name)
+            Node = Node.predecessor
+        print("The path is: " + " ".join(Path_from_start_to_end[::-1]))
 
 # Test1 Directed Graph
-node1 = Vertex("A")
-node2 = Vertex("B")
-node3 = Vertex("C")
-node4 = Vertex("D")
-node5 = Vertex("E")
-node6 = Vertex("F")
-node7 = Vertex("G")
-node8 = Vertex("H")
+node_A = Node("A")
+node_B = Node("B")
+node_C = Node("C")
+node_D = Node("D")
+node_E = Node("E")
+node_F = Node("F")
+node_G = Node("G")
+node_H = Node("H")
 
-edge1 = Edge(5, node1, node2)
-edge2 = Edge(8, node1, node8)
-edge3 = Edge(9, node1, node5)
-edge4 = Edge(15, node2, node4)
-edge5 = Edge(12, node2, node3)
-edge6 = Edge(4, node2, node8)
-edge7 = Edge(7, node8, node3)
-edge8 = Edge(6, node8, node6)
-edge9 = Edge(5, node5, node8)
-edge10 = Edge(4, node5, node6)
-edge11 = Edge(20, node5, node7)
-edge12 = Edge(1, node6, node3)
-edge13 = Edge(13, node6, node7)
-edge14 = Edge(3, node3, node4)
-edge15 = Edge(11, node3, node7)
-edge16 = Edge(9, node4, node7)
+edge1 = Edge(5, node_A, node_B)
+edge2 = Edge(8, node_A, node_H)
+edge3 = Edge(9, node_A, node_E)
+edge4 = Edge(15, node_B, node_D)
+edge5 = Edge(12, node_B, node_C)
+edge6 = Edge(4, node_B, node_H)
+edge7 = Edge(7, node_H, node_C)
+edge8 = Edge(6, node_H, node_F)
+edge9 = Edge(5, node_E, node_H)
+edge10 = Edge(20, node_E, node_G)
+edge11 = Edge(1, node_F, node_C)
+edge12 = Edge(13, node_F, node_G)
+edge13 = Edge(3, node_C, node_D)
+edge14 = Edge(11, node_C, node_G)
+edge15 = Edge(9, node_D, node_G)
 
+node_A.adjacencyList.append(edge1)
+node_A.adjacencyList.append(edge2)
+node_A.adjacencyList.append(edge3)
+node_B.adjacencyList.append(edge4)
+node_B.adjacencyList.append(edge5)
+node_B.adjacencyList.append(edge6)
+node_H.adjacencyList.append(edge7)
+node_H.adjacencyList.append(edge8)
+node_E.adjacencyList.append(edge9)
+node_E.adjacencyList.append(edge10)
+node_F.adjacencyList.append(edge11)
+node_F.adjacencyList.append(edge12)
+node_C.adjacencyList.append(edge13)
+node_C.adjacencyList.append(edge14)
+node_D.adjacencyList.append(edge15)
 
-node1.adjacencyList.append(edge1)
-node1.adjacencyList.append(edge2)
-node1.adjacencyList.append(edge3)
-node2.adjacencyList.append(edge4)
-node2.adjacencyList.append(edge5)
-node2.adjacencyList.append(edge6)
-node8.adjacencyList.append(edge7)
-node8.adjacencyList.append(edge8)
-node5.adjacencyList.append(edge9)
-node5.adjacencyList.append(edge10)
-node5.adjacencyList.append(edge11)
-node6.adjacencyList.append(edge12)
-node6.adjacencyList.append(edge13)
-node3.adjacencyList.append(edge14)
-node3.adjacencyList.append(edge15)
-node4.adjacencyList.append(edge16)
-
-vertexList = (node1, node2, node3, node4, node5, node6, node7, node8)
+nodeList = (node_A, node_B, node_C, node_D, node_E, node_F, node_G, node_H)
 dj = Dijkstra()
-dj.calculateShortestPath(vertexList, node1)
-dj.getShortestPath(node7)
+dj.calculateShortestPath(nodeList, node_A)
+dj.getShortestPath(node_A, node_G)
 
 # Test 2 Undirected Graph
-node1 = Vertex("S") # Start
-node2 = Vertex("A")
-node3 = Vertex("B")
-node4 = Vertex("C")
-node5 = Vertex("D")
-node6 = Vertex("E") # End
-node7 = Vertex("F")
-node8 = Vertex("G")
-node9 = Vertex("H")
-node10 = Vertex("I")
-node11 = Vertex("J")
-node12 = Vertex("K")
-node13 = Vertex("L")
+node_A = Node("S") # Start
+node_B = Node("A")
+node_C = Node("B")
+node_D = Node("C")
+node_E = Node("D")
+node_F = Node("E") # End
+node_G = Node("F")
+node_H = Node("G")
+node9 = Node("H")
+node_A0 = Node("I")
+node_A1 = Node("J")
+node_A2 = Node("K")
+node_A3 = Node("L")
 
 # S neighbors
-edge1 = Edge(7, node1, node2) # A
-edge2 = Edge(2, node1, node3) # B
-edge3 = Edge(3, node1, node4) # C
+edge1 = Edge(7, node_A, node_B) # A
+edge2 = Edge(2, node_A, node_C) # B
+edge3 = Edge(3, node_A, node_D) # C
 # A neighbors
-edge4 = Edge(7, node2, node1) # S
-edge5 = Edge(3, node2, node3) # B
-edge6 = Edge(4, node2, node5) # D
+edge4 = Edge(7, node_B, node_A) # S
+edge5 = Edge(3, node_B, node_C) # B
+edge6 = Edge(4, node_B, node_E) # D
 # B neighbors
-edge7 = Edge(2, node3, node1) # S
-edge8 = Edge(3, node3, node2) # A
-edge9 = Edge(4, node3, node5) # D
-edge10 = Edge(1, node3, node9) # H
+edge7 = Edge(2, node_C, node_A) # S
+edge8 = Edge(3, node_C, node_B) # A
+edge9 = Edge(4, node_C, node_E) # D
+edge10 = Edge(1, node_C, node9) # H
 # D neighbors
-edge11 = Edge(4, node5, node2) # A
-edge12 = Edge(4, node5, node3) # B
-edge13 = Edge(5, node5, node7) # F
+edge11 = Edge(4, node_E, node_B) # A
+edge12 = Edge(4, node_E, node_C) # B
+edge13 = Edge(5, node_E, node_G) # F
 # F neighbors
-edge14 = Edge(5, node7, node5) # D
-edge15 = Edge(3, node7, node9) # H
+edge14 = Edge(5, node_G, node_E) # D
+edge15 = Edge(3, node_G, node9) # H
 # H neighbors
-edge16 = Edge(1, node9, node3) # B
-edge17 = Edge(3, node9, node7) # F
-edge18 = Edge(2, node9, node8) # G
+edge16 = Edge(1, node9, node_C) # B
+edge17 = Edge(3, node9, node_G) # F
+edge18 = Edge(2, node9, node_H) # G
 # G neighbors
-edge19 = Edge(2, node8, node9) # H
-edge20 = Edge(2, node8, node6) # E
+edge19 = Edge(2, node_H, node9) # H
+edge20 = Edge(2, node_H, node_F) # E
 # E neighbors
-edge21 = Edge(5, node6, node12) # K
-edge22 = Edge(5, node6, node8) # G
+edge21 = Edge(5, node_F, node_A2) # K
+edge22 = Edge(5, node_F, node_H) # G
 # K neighbors
-edge23 = Edge(5, node12, node6) # E
-edge24 = Edge(4, node12, node10) # I
-edge25 = Edge(4, node12, node11) # J
+edge23 = Edge(5, node_A2, node_F) # E
+edge24 = Edge(4, node_A2, node_A0) # I
+edge25 = Edge(4, node_A2, node_A1) # J
 # I neighbors
-edge26 = Edge(4, node10, node12) # K
-edge27 = Edge(6, node10, node11) # J
-edge28 = Edge(4, node10, node13) # L
+edge26 = Edge(4, node_A0, node_A2) # K
+edge27 = Edge(6, node_A0, node_A1) # J
+edge28 = Edge(4, node_A0, node_A3) # L
 # J neighbors
-edge29 = Edge(4, node11, node12) # K
-edge30 = Edge(6, node11, node10) # I
-edge31 = Edge(4, node11, node13) # I
+edge29 = Edge(4, node_A1, node_A2) # K
+edge30 = Edge(6, node_A1, node_A0) # I
+edge31 = Edge(4, node_A1, node_A3) # I
 # L neighbors
-edge32 = Edge(4, node13, node10) # I
-edge33 = Edge(4, node13, node11) # J
-edge34 = Edge(2, node13, node4) # C
+edge32 = Edge(4, node_A3, node_A0) # I
+edge33 = Edge(4, node_A3, node_A1) # J
+edge34 = Edge(2, node_A3, node_D) # C
 # C neighbors
-edge35 = Edge(2, node4, node13) # L
-edge36 = Edge(3, node13, node1) # S
+edge35 = Edge(2, node_D, node_A3) # L
+edge36 = Edge(3, node_A3, node_A) # S
 
 # Node S
-node1.adjacencyList.append(edge1)
-node1.adjacencyList.append(edge2)
-node1.adjacencyList.append(edge3)
+node_A.adjacencyList.append(edge1)
+node_A.adjacencyList.append(edge2)
+node_A.adjacencyList.append(edge3)
 # Node A
-node2.adjacencyList.append(edge4)
-node2.adjacencyList.append(edge5)
-node2.adjacencyList.append(edge6)
+node_B.adjacencyList.append(edge4)
+node_B.adjacencyList.append(edge5)
+node_B.adjacencyList.append(edge6)
 # Node B
-node3.adjacencyList.append(edge7)
-node3.adjacencyList.append(edge8)
-node3.adjacencyList.append(edge9)
-node3.adjacencyList.append(edge10)
+node_C.adjacencyList.append(edge7)
+node_C.adjacencyList.append(edge8)
+node_C.adjacencyList.append(edge9)
+node_C.adjacencyList.append(edge10)
 # Node C
-node4.adjacencyList.append(edge35)
-node4.adjacencyList.append(edge36)
+node_D.adjacencyList.append(edge35)
+node_D.adjacencyList.append(edge36)
 # Node D
-node5.adjacencyList.append(edge11)
-node5.adjacencyList.append(edge12)
-node5.adjacencyList.append(edge13)
+node_E.adjacencyList.append(edge11)
+node_E.adjacencyList.append(edge12)
+node_E.adjacencyList.append(edge13)
 # Node E
-node6.adjacencyList.append(edge21)
-node6.adjacencyList.append(edge22)
+node_F.adjacencyList.append(edge21)
+node_F.adjacencyList.append(edge22)
 # Node F
-node7.adjacencyList.append(edge17)
-node7.adjacencyList.append(edge15)
+node_G.adjacencyList.append(edge17)
+node_G.adjacencyList.append(edge15)
 # Node G
-node8.adjacencyList.append(edge19)
-node8.adjacencyList.append(edge20)
+node_H.adjacencyList.append(edge19)
+node_H.adjacencyList.append(edge20)
 # Node H
 node9.adjacencyList.append(edge16)
 node9.adjacencyList.append(edge17)
 node9.adjacencyList.append(edge18)
 # Node I
-node10.adjacencyList.append(edge26)
-node10.adjacencyList.append(edge27)
-node10.adjacencyList.append(edge28)
+node_A0.adjacencyList.append(edge26)
+node_A0.adjacencyList.append(edge27)
+node_A0.adjacencyList.append(edge28)
 # Node J
-node11.adjacencyList.append(edge29)
-node11.adjacencyList.append(edge30)
-node11.adjacencyList.append(edge31)
+node_A1.adjacencyList.append(edge29)
+node_A1.adjacencyList.append(edge30)
+node_A1.adjacencyList.append(edge31)
 # Node K
-node12.adjacencyList.append(edge23)
-node12.adjacencyList.append(edge24)
-node12.adjacencyList.append(edge25)
+node_A2.adjacencyList.append(edge23)
+node_A2.adjacencyList.append(edge24)
+node_A2.adjacencyList.append(edge25)
 # Node L
-node13.adjacencyList.append(edge32)
-node13.adjacencyList.append(edge33)
-node13.adjacencyList.append(edge34)
+node_A3.adjacencyList.append(edge32)
+node_A3.adjacencyList.append(edge33)
+node_A3.adjacencyList.append(edge34)
 
-vertexList = (node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11, node12, node13)
+nodeList = (node_A, node_B, node_C, node_D, node_E, node_F, node_G, node_H, node9, node_A0, node_A1, node_A2, node_A3)
 dj = Dijkstra()
-dj.calculateShortestPath(vertexList, node1)
-dj.getShortestPath(node6)
+dj.calculateShortestPath(nodeList, node_A)
+dj.getShortestPath(node_A, node_F)
