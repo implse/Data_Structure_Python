@@ -3,8 +3,8 @@
 class Node(object):
     def __init__(self, value):
         self.value = value
-        self.leftChild = None
-        self.rightChild = None
+        self.left = None
+        self.right = None
 
 class BinarySearchTree(object):
 
@@ -20,17 +20,17 @@ class BinarySearchTree(object):
 
     def insertNode(self, value, node):
         if value < node.value:
-            # leftChild Sub Tree
-            if node.leftChild:
-                self.insertNode(value, node.leftChild)
+            # left Sub Tree
+            if node.left:
+                self.insertNode(value, node.left)
             else:
-                node.leftChild = Node(value)
+                node.left = Node(value)
         else:
-            # rightChild Sub Tree
-            if node.rightChild:
-                self.insertNode(value, node.rightChild)
+            # right Sub Tree
+            if node.right:
+                self.insertNode(value, node.right)
             else:
-                node.rightChild = Node(value)
+                node.right = Node(value)
 
     # Remove Method
     def removeNode(self, value):
@@ -42,34 +42,34 @@ class BinarySearchTree(object):
             return node
         # Searching Node.value
         if value < node.value:
-            node.leftChild = self.remove(value, node.leftChild)
+            node.left = self.remove(value, node.left)
         elif value > node.value:
-            node.rightChild = self.remove(value, node.rightChild)
+            node.right = self.remove(value, node.right)
         else:
             # Case 1: No child
-            if node.leftChild == None and node.rightChild == None:
+            if node.left == None and node.right == None:
                 del node
                 return None
             # Case 2: One child
-            elif node.leftChild == None:
-                tempNode = node.rightChild
+            elif node.left == None:
+                tempNode = node.right
                 del node
                 return tempNode
-            elif node.rightChild == None:
-                tempNode = node.leftChild
+            elif node.right == None:
+                tempNode = node.left
                 del node
                 return tempNode
             # Case 3: Two Children
             else:
-                tempNode = self.getPredecessor(node.leftChild)
+                tempNode = self.getPredecessor(node.left)
                 node.value = tempNode.value
-                node.leftChild = self.remove(tempNode.value, node.leftChild)
+                node.left = self.remove(tempNode.value, node.left)
         return node
 
     # Find predecessor
     def getPredecessor(self, node):
-        if node.rightChild:
-            return self.getPredecessor(node.rightChild)
+        if node.right:
+            return self.getPredecessor(node.right)
         return node
 
     # Traverse : In-order recursive
@@ -80,11 +80,11 @@ class BinarySearchTree(object):
             return self.traverseInOrder_Recursive(self.root)
 
     def traverseInOrder_Recursive(self, node):
-        if node.leftChild:
-            self.traverseInOrder_Recursive(node.leftChild)
+        if node.left:
+            self.traverseInOrder_Recursive(node.left)
         print(node.value)
-        if node.rightChild:
-            self.traverseInOrder_Recursive(node.rightChild)
+        if node.right:
+            self.traverseInOrder_Recursive(node.right)
 
     # Method 2 : return a list of values
     def traversInOrder(self):
@@ -93,11 +93,11 @@ class BinarySearchTree(object):
         else:
             result = []
             def traverseInOrder_Recursive(node):
-                if node.leftChild:
-                    traverseInOrder_Recursive(node.leftChild)
+                if node.left:
+                    traverseInOrder_Recursive(node.left)
                 result.append(node.value)
-                if node.rightChild:
-                    traverseInOrder_Recursive(node.rightChild)
+                if node.right:
+                    traverseInOrder_Recursive(node.right)
             traverseInOrder_Recursive(self.root)
         return result
 
@@ -110,10 +110,10 @@ class BinarySearchTree(object):
 
     def traversePrerOrder_Recursive(self, node):
         print(node.value)
-        if node.leftChild:
-            self.traversePrerOrder_Recursive(node.leftChild)
-        if node.rightChild:
-            self.traversePrerOrder_Recursive(node.rightChild)
+        if node.left:
+            self.traversePrerOrder_Recursive(node.left)
+        if node.right:
+            self.traversePrerOrder_Recursive(node.right)
 
     # Method 2 : return a list of values
     def traversePreOrder(self):
@@ -123,10 +123,10 @@ class BinarySearchTree(object):
             result = []
             def traversePrerOrder_Recursive(node):
                 result.append(node.value)
-                if node.leftChild:
-                    traversePrerOrder_Recursive(node.leftChild)
-                if node.rightChild:
-                    traversePrerOrder_Recursive(node.rightChild)
+                if node.left:
+                    traversePrerOrder_Recursive(node.left)
+                if node.right:
+                    traversePrerOrder_Recursive(node.right)
             traversePrerOrder_Recursive(self.root)
         return result
 
@@ -138,10 +138,10 @@ class BinarySearchTree(object):
             return self.traversePostOrder_Recursive(self.root)
 
     def traversePostOrder_Recursive(self, node):
-        if node.leftChild:
-            self.traversePostOrder_Recursive(node.leftChild)
-        if node.rightChild:
-            self.traversePostOrder_Recursive(node.rightChild)
+        if node.left:
+            self.traversePostOrder_Recursive(node.left)
+        if node.right:
+            self.traversePostOrder_Recursive(node.right)
         print(node.value)
 
     # Method 2 : return a list of values
@@ -151,10 +151,10 @@ class BinarySearchTree(object):
         else:
             result = []
             def traversePostOrder_Recursive(node):
-                if node.leftChild:
-                    traversePostOrder_Recursive(node.leftChild)
-                if node.rightChild:
-                    traversePostOrder_Recursive(node.rightChild)
+                if node.left:
+                    traversePostOrder_Recursive(node.left)
+                if node.right:
+                    traversePostOrder_Recursive(node.right)
                 result.append(node.value)
             traversePostOrder_Recursive(self.root)
         return result
@@ -163,15 +163,15 @@ class BinarySearchTree(object):
     # Find Minimum Value
     def findMin(self):
         current = self.root
-        while(current.leftChild != None):
-            current = current.leftChild
+        while(current.left != None):
+            current = current.left
         return current.value
 
     # Find Maximum value
     def findMax(self):
         current = self.root
-        while(current.rightChild != None):
-            current = current.rightChild
+        while(current.right != None):
+            current = current.right
         return current.value
 
     # Find value
@@ -179,9 +179,9 @@ class BinarySearchTree(object):
         current = self.root
         while current.value != value:
             if value < current.value:
-                current = current.leftChild
+                current = current.left
             elif value > current.value:
-                current = current.rightChild
+                current = current.right
             if current == None:
                 return None
         return current.value
@@ -193,10 +193,10 @@ class BinarySearchTree(object):
             if node == None:
                 return
             path.append(node.value)
-            print_paths(node.leftChild, path)
-            if node.leftChild == None and node.rightChild == None:
+            print_paths(node.left, path)
+            if node.left == None and node.right == None:
                 print(path)
-            print_paths(node.rightChild, path)
+            print_paths(node.right, path)
             path.pop()
         return print_paths(self.root, path)
 
@@ -208,10 +208,10 @@ class BinarySearchTree(object):
         while len(q) > 0:
             current = q[0]
             print(current.value)
-            if current.leftChild != None:
-                q.append(current.leftChild)
-            if current.rightChild != None:
-                q.append(current.rightChild)
+            if current.left != None:
+                q.append(current.left)
+            if current.right != None:
+                q.append(current.right)
             q.pop(0)
 
     # Size of a Binary Tree : Number of nodes in the Tree
@@ -219,5 +219,5 @@ class BinarySearchTree(object):
         def size(node):
             if node == None:
                 return 0
-            return size(node.leftChild) + size(node.rightChild) + 1
+            return size(node.left) + size(node.right) + 1
         return size(self.root)
