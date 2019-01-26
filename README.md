@@ -359,8 +359,8 @@ Definition:
 
   - G = (V, E)
 
-  V is a set of Vertices or Nodes.
-  E is a set of Edges or Links.
+  V is a set of Vertices or Nodes.(number of Vertices)
+  E is a set of Edges or Links.(number of connections)
 
 
 
@@ -397,7 +397,11 @@ An undirected graph is a graph in which all the edges are bi-directional i.e. th
 A directed graph is a graph in which all the edges are uni-directional i.e. the edges point in a single direction.
 
 #### Weighted Graph
-In a weighted graph, each edge is assigned a weight or cost.
+In a weighted graph, each edge is assigned a weight or cost. This value is used to represent a certain quantifiable relationship between the nodes they connect.
+
+For example, weights could represent distance, time, the number of connections shared between two users in a social network.
+
+These weights are used by Dijkstra’s Algorithm to optimize routes by finding the shortest or least expensive paths between nodes in a network.
 
 ### Graph representation
 
