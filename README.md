@@ -1,5 +1,9 @@
 # Data Structure in Python
 
+## Abstract Data Types (ADTs)
+
+Abstract data types are a theoretical computer science concept. They simply describe what kind of data a data structure can hold and what operations are allowed on the data.
+
 ## Linked List
 A linked List is a data structure used for storing collections of data.
 
