@@ -4,6 +4,11 @@
 
 Abstract data types are a theoretical computer science concept. They simply describe what kind of data a data structure can hold and what operations are allowed on the data.
 
+## Data Structures (DS)
+
+Concrete implementation of ADTs that organize data stored in memory. For every operation that is allowed on an abstract data type we have one method or one function that is defined by the data structure's class.
+
+
 ## Linked List
 A linked List is a data structure used for storing collections of data.
 
