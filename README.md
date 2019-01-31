@@ -56,7 +56,7 @@ or shrink throughout the execution.
 ## Stack
 
 <p align="center">
-  <img width="480" height="180" src="images\Stack_180_360.png">
+  <img width="480" height="360" src="images\Stack_180_360.png">
 </p>
 
 A stack is a simple data structure used for storing data.
