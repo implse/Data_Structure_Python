@@ -10,6 +10,11 @@ Concrete implementation of ADTs that organize data stored in memory. For every o
 
 
 ## Linked List
+
+<p align="center">
+  <img width="480" height="180" src="images\LinkedList_480_180.png">
+</p>
+
 A linked List is a data structure used for storing collections of data.
 
 - Not contiguous piece of memory.
