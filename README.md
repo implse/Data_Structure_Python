@@ -85,6 +85,10 @@ The last element inserted is the first one to be deleted. Last in, First out (LI
 
 ## Queue
 
+<p align="center">
+  <img width="480" height="180" src="images\Queue_480_180.png">
+</p>
+
 A Queue is a data structure used for storing data similar to Stack.
 
 The first element to be inserted is the first one to be deleted. First in First
