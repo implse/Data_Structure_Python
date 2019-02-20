@@ -115,6 +115,10 @@ Linked List implementation of a Queue.
 
 ## Tree
 
+<p align="center">
+  <img width="480" height="360" src="images\Tree_480_360.png">
+</p>
+
 A Tree structure is a way of representing the hierarchical nature of a structure in a graphical form.
 
 Tree is an example of non-linear data structure.
@@ -159,8 +163,8 @@ Always sorted by implementation.
 
 Binary Search Tree (BST or Ordered Binary Tree) is a special type of Binary Tree that follows these conditions:
 
-- Left child node is smaller than its parent Node.
-- Right child node is greater than its parent Node.
+- Left child node is smaller than its Parent node.
+- Right child node is greater than its Parent Node.
 
 
 No duplicate Keys.
