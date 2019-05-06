@@ -17,7 +17,7 @@ Concrete implementation of Abstract Data Types ADTs that organize data stored in
   <img width="480" height="180" src="images\LinkedList_480_180.png">
 </p>
 
-A Linked List is a data structure used for storing collections of data.
+A Linked List is a data structure used for storing collections of data. Each element of a linked list is called an node.
 
 
 - Not contiguous piece of memory.
@@ -34,13 +34,17 @@ An individual node contains data and links to other nodes. Each data structure a
 - Contain links to other nodes. If a node has no links, or they are all null/None, or you have reached the end of the path you were following.
 - Can be orphaned if there are no existing links to them.
 
-|Operation                   |Big O  |
-|----------------------------|-------|
-|Indexing                    |O(n)   |
-|Insert/Delete at beginning  |O(1)   |
-|Insert/Delete at ending     |O(1)   |
-|Insertion/Deletion in middle|O(n)   |
-|Access Time                 |O(n)   |
+### Time Complexity 
+
+|Operation                   |Big O    |
+|----------------------------|---------|
+|Indexing                    |O(n)     |
+|Insert/Delete at beginning  |O(1)     |
+|Insert/Delete at ending     |O(1)/O(n)|
+|Insertion/Deletion in middle|O(n)     |
+|Access Time                 |O(n)     |
+
+* Insert/Delete at ending : depend on the implementation. Tail reference.
 
 ### Basic Operations on Linked List
 
