@@ -19,10 +19,13 @@ Concrete implementation of Abstract Data Types ADTs that organize data stored in
 
 A Linked List is a data structure used for storing collections of data. Each element of a linked list is called an node.
 
+Linked Lists typically contain unidirectional links (next node), but some implementations make use of bidirectional links (next and previous nodes).
 
 - Not contiguous piece of memory.
 - Differing size storage space at each index.
 - Dynamic - New piece of memory allocated for each node.
+
+Linked Lists are sequential-access data structure.
 
 ### Nodes
 
@@ -34,7 +37,7 @@ An individual node contains data and links to other nodes. Each data structure a
 - Contain links to other nodes. If a node has no links, or they are all null/None, or you have reached the end of the path you were following.
 - Can be orphaned if there are no existing links to them.
 
-### Time Complexity 
+### Time Complexity
 
 |Operation                   |Big O    |
 |----------------------------|---------|
@@ -66,7 +69,6 @@ or shrink throughout the execution.
 
 ### Disadvantages
 
-- Sequential Access, Nodes in a linked list must be read in order from the beginning.
 - You frequently need random, unordered access to the data.
 - You need extreme performance to access the items.
 - The number of items doesn't change during execution, so you can easily allocate contiguous space of computer memory.
