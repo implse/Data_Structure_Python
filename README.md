@@ -6,7 +6,9 @@ Abstract data types are a theoretical computer science concept. They simply desc
 
 ## Data Structures (DS)
 
-Concrete implementation of ADTs that organize data stored in memory. For every operation that is allowed on an abstract data type we have one method or one function that is defined by the data structure's class.
+Concrete implementation of Abstract Data Types ADTs that organize data stored in memory. For every operation that is allowed on an abstract data type we have one method or one function that is defined by the data structure's class.
+
+- One Abstract data types operation  = One function in Data Structure.
 
 
 ## Linked List
@@ -15,11 +17,22 @@ Concrete implementation of ADTs that organize data stored in memory. For every o
   <img width="480" height="180" src="images\LinkedList_480_180.png">
 </p>
 
-A linked List is a data structure used for storing collections of data.
+A Linked List is a data structure used for storing collections of data.
+
 
 - Not contiguous piece of memory.
 - Differing size storage space at each index.
 - Dynamic - New piece of memory allocated for each node.
+
+### Nodes
+
+Nodes are the fundamental building block of many computer science data structures. They form the basis for linked lists, stacks, queues, trees, and more.
+
+An individual node contains data and links to other nodes. Each data structure adds additional constraints or behavior to these features to create the desired structure.
+
+- Contain data, which can be a variety of data types
+- Contain links to other nodes. If a node has no links, or they are all null/None, or you have reached the end of the path you were following.
+- Can be orphaned if there are no existing links to them.
 
 |Operation                   |Big O  |
 |----------------------------|-------|
@@ -49,6 +62,7 @@ or shrink throughout the execution.
 
 ### Disadvantages
 
+- Sequential Access, Nodes in a linked list must be read in order from the beginning.
 - You frequently need random, unordered access to the data.
 - You need extreme performance to access the items.
 - The number of items doesn't change during execution, so you can easily allocate contiguous space of computer memory.
