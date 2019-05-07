@@ -79,9 +79,18 @@ or shrink throughout the execution.
   <img width="480" height="360" src="images\Stack_180_360.png">
 </p>
 
-A stack is a simple data structure used for storing data.
+A Stack is a simple data structure used for storing data.
 
-The last element inserted is the first one to be deleted. Last in, First out (LIFO).
+The last element inserted is the first one to be removed. Last in, First out (LIFO).
+
+- Contains data nodes.
+- Support three main operations :
+    - Push adds data to the top of the stack.
+    - Pop removes and provides data from the top of the stack.
+    - Peek reveals data on the top of the stack.
+- Implemented using a Linked List or Array.
+- Can have a limited size.
+- Stack process data Last In, First Out
 
 
 |Operation                   |Big O  |
