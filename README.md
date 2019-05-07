@@ -92,6 +92,7 @@ The last element inserted is the first one to be removed. Last in, First out (LI
 - Can have a limited size.
 - Stack process data Last In, First Out
 
+### Time Complexity
 
 |Operation                   |Big O  |
 |----------------------------|-------|
@@ -99,10 +100,11 @@ The last element inserted is the first one to be removed. Last in, First out (LI
 |Pop value                   |O(1)   |
 
 
-
 ### Basic Operations on Stack
 
-- Push and Pop operations.
+- Push
+- Pop
+- Peek
 
 ### Applications
 
