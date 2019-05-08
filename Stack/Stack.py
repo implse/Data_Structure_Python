@@ -22,3 +22,8 @@ class Stack(object):
         self.top = self.top.next
         self.size -= 1
         return pop_value
+
+    def peek(self):
+        if self.top is None:
+            return None
+        return self.top.value
