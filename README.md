@@ -81,7 +81,9 @@ or shrink throughout the execution.
 
 A Stack is a simple data structure used for storing data.
 
-The last element inserted is the first one to be removed. Last in, First out (LIFO).
+The last element inserted is the first one to be removed. Last In, First Out (LIFO).
+
+Stacks can be implemented using a linked list as the underlying data structure because it’s more efficient than a list or array.
 
 - Contains data nodes.
 - Support three main operations :
@@ -102,9 +104,9 @@ The last element inserted is the first one to be removed. Last in, First out (LI
 
 ### Basic Operations on Stack
 
-- Push
-- Pop
-- Peek
+- Push - adds data to the top of the stack.
+- Pop - returns and removes data from the top of the stack.
+- Peek - returns data from the to” of the stack without removing it.
 
 ### Applications
 
@@ -122,10 +124,12 @@ The last element inserted is the first one to be removed. Last in, First out (LI
 
 A Queue is a data structure used for storing data similar to Stack.
 
-The first element to be inserted is the first one to be deleted. First in First
-out (FIFO).
+The first element to be inserted is the first one to be removed. First In, First
+Out (FIFO).
 
-Linked List implementation of a Queue.
+Queues can be implemented using a linked list as the underlying data structure. The front of the queue is equivalent to the head node of a linked list and the back of the queue is equivalent to the tail node.
+
+### Time Complexity
 
 |Operation                   |Big O  |
 |----------------------------|-------|
@@ -135,9 +139,11 @@ Linked List implementation of a Queue.
 
 ### Basic Operations on Queue
 
-- EnQueue operation is implemented by inserting an element at the end of the list.
+- Enqueue - adds data to the “back” or end of the queue.
 
-- DeQueue operation is implemented by deleting an element from the beginning of the list.
+- DeQueue - provides and removes data from the “front” or beginning of the queue.
+
+- Peek - reveals data from the “front” of the queue without removing it.
 
 ### Applications
 
