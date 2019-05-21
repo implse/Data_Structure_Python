@@ -150,6 +150,26 @@ Queues can be implemented using a linked list as the underlying data structure. 
 - IO Buffers.
 - CPU scheduling.
 
+
+## Hash Table
+
+Hash Table or Hash Map is a data structure that stores the keys and their associated values.
+
+A Hash Table is basically made up of 2 different parts:
+  - An array which is the actual table where the data will be stored and what we must search through to find data.
+  - A Hash Function or Compression Function uses to transform Input Data or Key into index.
+
+A good Hash Function should have the following characteristics:
+    - Minimize Collisions.
+    - Be easy and quick to compute.
+    - Distribute key values evenly in the hash table.
+    - Use all the information provided in the key.
+    - Have a high load factor for a given set of keys.
+
+Load Factor = Number of elements in the Hash Table / Hash Table size
+
+Hashing is not a reversible process.
+
 ## Tree
 
 <p align="center">
