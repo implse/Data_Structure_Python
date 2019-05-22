@@ -160,11 +160,11 @@ A Hash Table is basically made up of 2 different parts:
   - A Hash Function or Compression Function uses to transform Input Data or Key into index.
 
 A good Hash Function should have the following characteristics:
-    - Minimize Collisions.
-    - Be easy and quick to compute.
-    - Distribute key values evenly in the hash table.
-    - Use all the information provided in the key.
-    - Have a high load factor for a given set of keys.
+  - Minimize Collisions.
+  - Be easy and quick to compute.
+  - Distribute key values evenly in the hash table.
+  - Use all the information provided in the key.
+  - Have a high load factor for a given set of keys.
 
 Load Factor = Number of elements in the Hash Table / Hash Table size
 
@@ -176,7 +176,19 @@ Hashing is not a reversible process.
 Collisions occur whenever a hash tables hashing function generatedtes the same index for more than one key.
 
 #### Separate Chaining
-#### Linear Probing
+
+Seperate Chaining is one of the most commonly used collision resolution technique. It is usually implemented using linked list.
+
+A hash map that uses separate chaining with linked lists but experiences frequent collisions loses one of its most essential features.
+
+
+#### Linear Probing (Open Adressing)
+
+In open addressing we stick to the array as our underlying data structure, but we continue looking for a new index to save our data if the first result of our hash function has a different key’s data.
+
+A common open method of open addressing is called probing. Probing means continuing to find new array indices in a fixed sequence until an empty index is found.
+
+The issue with Linear Probing  is that the act of simply moving over the next available hash bucket and inserting an element at the next free space lead to something called clustering.
 
 ### Time Complexity
 
