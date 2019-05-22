@@ -170,6 +170,14 @@ Load Factor = Number of elements in the Hash Table / Hash Table size
 
 Hashing is not a reversible process.
 
+
+### Collisions
+
+Collisions occur whenever a hash tables hashing function generatedtes the same index for more than one key.
+
+#### Separate Chaining
+#### Linear Probing
+
 ### Time Complexity
 
 |Operation                   |Big O  |
