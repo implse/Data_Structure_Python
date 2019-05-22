@@ -170,6 +170,14 @@ Load Factor = Number of elements in the Hash Table / Hash Table size
 
 Hashing is not a reversible process.
 
+### Time Complexity
+
+|Operation                   |Big O  |
+|----------------------------|-------|
+|Search                      |O(1)   |
+|Insert                      |O(1)   |
+|Delete                      |O(1)   |
+
 ## Tree
 
 <p align="center">
