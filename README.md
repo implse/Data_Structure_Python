@@ -173,13 +173,15 @@ Hashing is not a reversible process.
 
 ### Collisions
 
-Collisions occur whenever a hash tables hashing function generatedtes the same index for more than one key.
+Collisions occur whenever a hash tables hashing function generates the same index for more than one key.
 
 #### Separate Chaining
 
 Seperate Chaining is one of the most commonly used collision resolution technique. It is usually implemented using linked list.
 
 A hash map that uses separate chaining with linked lists but experiences frequent collisions loses one of its most essential features.
+
+With a good hash function chaining still averages out to have a search time of O(1), or constant lookup time.
 
 
 #### Linear Probing (Open Adressing)
