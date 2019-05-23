@@ -200,6 +200,15 @@ The issue with Linear Probing  is that the act of simply moving over the next av
 |Insert                      |O(1)   |
 |Delete                      |O(1)   |
 
+
+#### Applications
+
+- Associative arrays
+- Database indexing
+- Caches
+- Object representation
+- Hash Functions are used in various algorithms to make their computing faster
+
 ## Tree
 
 <p align="center">
