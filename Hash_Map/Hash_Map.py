@@ -10,6 +10,7 @@ class HashMap:
 
     def compressor(self, hash_code):
         return hash_code % self.array_size
+
     # Set key, value
     def set(self, key, value):
         array_index = self.compressor(self.hash(key))
@@ -42,6 +43,7 @@ class HashMap:
           number_collisions += 1
 
         return
+
     # Get value from Key
     def get(self, key):
         array_index = self.compressor(self.hash(key))
@@ -75,6 +77,12 @@ class HashMap:
             for k in self.array:
                 if k != None:
                     print(k[0])
+    # Return Key Value
+    def items(self):
+        for k in self.array:
+            if k != None:
+                print((k[0], k[1]))
+
 
 
 
@@ -94,3 +102,4 @@ hash_map.set("Bill Evans", "New Jersey")
 print(hash_map.get("John Coltrane"))
 
 hash_map.keys()
+hash_map.items()
