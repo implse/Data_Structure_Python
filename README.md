@@ -169,6 +169,8 @@ A good Hash Function should have the following characteristics:
 Load Factor = Number of elements in the Hash Table / Hash Table size
 
 Hashing is not a reversible process.
+Hash Table are Unordered and slow key iteration.
+
 
 
 ### Collisions
