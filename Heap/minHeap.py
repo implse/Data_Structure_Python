@@ -1,7 +1,7 @@
 class MinHeap:
     def __init__(self, array):
         self.heap = self.heapify(array)
-        
+
     # O(n) Time / O(1) Space
     def heapify(self, array):
         firstParentIdx = (len(array) - 2) // 2
@@ -10,7 +10,7 @@ class MinHeap:
         return array
 
     # O(log(n)) Time / O(1) Space
-    def siftDown(self, currentIdx, endIdx, heap):
+    def heapify_down(self, currentIdx, endIdx, heap):
         # Left Child
         childOneIdx = (currentIdx * 2) + 1
         while childOneIdx <= endIdx:
