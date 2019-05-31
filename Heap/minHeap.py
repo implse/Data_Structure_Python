@@ -6,7 +6,7 @@ class MinHeap:
     def heapify(self, array):
         firstParentIdx = (len(array) - 2) // 2
         for currentIdx in reversed(range(firstParentIdx + 1)):
-            self.siftDown(currentIdx, len(array) - 1, array)
+            self.heapify_down(currentIdx, len(array) - 1, array)
         return array
 
     # O(log(n)) Time / O(1) Space
@@ -28,7 +28,7 @@ class MinHeap:
                 break
 
     # O(log(n)) Time / O(1) Space
-    def siftUp(self, currentIdx, Heap):
+    def heapify_up(self, currentIdx, Heap):
         parrentIdx = (currentIdx - 1) // 2
         # While we are not of top of the heap and value at currentIdx is less than parent value
         while currentIdx > 0 and heap[currentIdx] < heap[parrentIdx]:
@@ -43,12 +43,12 @@ class MinHeap:
     def heapPop(self):
         self.swap(0, len(self.heap) - 1, self.heap)
         valueToRemove = self.heap.pop()
-        self.siftDown(0, len(self.heap) - 1, self.heap)
+        self.heapify_down(0, len(self.heap) - 1, self.heap)
         return valueToRemove
 
     def heapPush(self, value):
         self.heap.append(value)
-        self.siftUp(len(self.heap) - 1, self.heap)
+        self.heapify_up(len(self.heap) - 1, self.heap)
 
     def swap(self, i, j, heap):
         heap[i], heap[j] = heap[j], heap[i]
