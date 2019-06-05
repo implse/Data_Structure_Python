@@ -12,29 +12,29 @@ class MaxHeap:
     # O(log(n)) Time / O(1) Space
     def heapify_down(self, currentIdx, endIdx, heap):
         # Left Child
-        childOneIdx = (currentIdx * 2) + 1
-        while childOneIdx <= endIdx:
+        leftChildIdx = (currentIdx * 2) + 1
+        while leftChildIdx <= endIdx:
             # Right Child
-            childTwoIdx = (currentIdx * 2) + 2 if (currentIdx * 2) + 2 <= endIdx else -1
-            if childTwoIdx != -1 and heap[childTwoIdx] > heap[childOneIdx]:
-                idxToSwap = childTwoIdx
+            rightChildIdx = (currentIdx * 2) + 2 if (currentIdx * 2) + 2 <= endIdx else -1
+            if rightChildIdx != -1 and heap[rightChildIdx] > heap[leftChildIdx]:
+                idxToSwap = rightChildIdx
             else:
-                idxToSwap = childOneIdx
+                idxToSwap = leftChildIdx
             if heap[idxToSwap] > heap[currentIdx]:
                 self.swap(currentIdx, idxToSwap, heap)
                 currentIdx = idxToSwap
-                childOneIdx = (currentIdx * 2) + 1
+                leftChildIdx = (currentIdx * 2) + 1
             else:
                 break
 
     # O(log(n)) Time / O(1) Space
     def heapify_up(self, currentIdx, Heap):
-        parrentIdx = (currentIdx - 1) // 2
+        parentIdx = (currentIdx - 1) // 2
         # While we are not of top of the heap and value at currentIdx is less than parent value
-        while currentIdx > 0 and heap[currentIdx] > heap[parrentIdx]:
+        while currentIdx > 0 and heap[currentIdx] > heap[parentIdx]:
             self.swap(currentIdx, parentIdx, heap)
             currentIdx = parentIdx
-            parrentIdx = (currentIdx - 1) // 2
+            parentIdx = (currentIdx - 1) // 2
 
     # O(1) Time
     def peek(self):
