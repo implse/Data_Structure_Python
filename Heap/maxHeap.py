@@ -28,7 +28,7 @@ class MaxHeap:
                 break
 
     # O(log(n)) Time / O(1) Space
-    def heapify_up(self, currentIdx, Heap):
+    def heapify_up(self, currentIdx, heap):
         parentIdx = (currentIdx - 1) // 2
         # While we are not of top of the heap and value at currentIdx is less than parent value
         while currentIdx > 0 and heap[currentIdx] > heap[parentIdx]:

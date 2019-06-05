@@ -1,7 +1,7 @@
 class MinHeap:
     def __init__(self, array):
         self.heap = self.heapify(array)
-        
+
     # O(n) Time / O(1) Space
     def heapify(self, array):
         firstParentIdx = (len(array) - 2) // 2
@@ -28,13 +28,13 @@ class MinHeap:
                 break
 
     # O(log(n)) Time / O(1) Space
-    def heapify_up(self, currentIdx, Heap):
-        parrentIdx = (currentIdx - 1) // 2
+    def heapify_up(self, currentIdx, heap):
+        parentIdx = (currentIdx - 1) // 2
         # While we are not of top of the heap and value at currentIdx is less than parent value
-        while currentIdx > 0 and heap[currentIdx] < heap[parrentIdx]:
+        while currentIdx > 0 and heap[currentIdx] < heap[parentIdx]:
             self.swap(currentIdx, parentIdx, heap)
             currentIdx = parentIdx
-            parrentIdx = (currentIdx - 1) // 2
+            parentIdx = (currentIdx - 1) // 2
 
     # O(1) Time
     def peek(self):
