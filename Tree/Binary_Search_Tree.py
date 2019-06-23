@@ -72,7 +72,7 @@ class BinarySearchTree(object):
             return self.getPredecessor(node.right)
         return node
 
-    # Traverse : In-order recursive
+    # Depth First Search : In-order recursive
 
     # Method 1 : print value
     def traversInOrder(self):
@@ -101,7 +101,7 @@ class BinarySearchTree(object):
             traverseInOrder_Recursive(self.root)
         return result
 
-    # Traverse : Pre-order recursive
+    # Depth First Search : Pre-order recursive
 
     # Method 1 : print value
     def traversePreOrder(self):
@@ -130,7 +130,7 @@ class BinarySearchTree(object):
             traversePrerOrder_Recursive(self.root)
         return result
 
-    # Traverse : Post-order recursive
+    # Depth First Search : Post-order recursive
 
     # Method 1 : print value
     def traversePostOrder(self):
@@ -159,6 +159,18 @@ class BinarySearchTree(object):
             traversePostOrder_Recursive(self.root)
         return result
 
+    # Breath First Search
+    def breath_first_search(self):
+        node = self.root
+        queue = []
+        queue.append(node)
+        while queue:
+            n = queue.pop(0)
+            print(n.value)
+            if n.left != None:
+                queue.append(n.left)
+            if n.right != None:
+                queue.append(n.right)
 
     # Find Minimum Value
     def findMin(self):
@@ -200,20 +212,6 @@ class BinarySearchTree(object):
             path.pop()
         return print_paths(self.root, path)
 
-    # Print values by Level Order
-    def level_order(self):
-        q = []
-        current = self.root
-        q.append(current)
-        while len(q) > 0:
-            current = q[0]
-            print(current.value)
-            if current.left != None:
-                q.append(current.left)
-            if current.right != None:
-                q.append(current.right)
-            q.pop(0)
-
     # Size of a Binary Tree : Number of nodes in the Tree
     def size_binary_tree(self):
         def size(node):
@@ -221,3 +219,18 @@ class BinarySearchTree(object):
                 return 0
             return size(node.left) + size(node.right) + 1
         return size(self.root)
+
+    # Depth of a Binary Tree : recursive
+    def depth_binary_tree(self):
+        if self.root:
+            return self.depth(self.root)
+
+    def depth(self, node):
+        if node == None:
+            return 0
+        depth_left = self.depth(node.left)
+        depth_right = self.depth(node.right)
+        if depth_left > depth_right:
+            return depth_left + 1
+        else:
+            return depth_right + 1
