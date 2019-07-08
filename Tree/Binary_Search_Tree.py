@@ -11,7 +11,7 @@ class BinarySearchTree(object):
     def __init__(self):
         self.root = None
 
-    # Insert Method
+    # Insert Method Recursive
     def insert(self, value):
         if not self.root:
             self.root = Node(value)
@@ -26,11 +26,33 @@ class BinarySearchTree(object):
             else:
                 node.left = Node(value)
         else:
-            # right Sub Tree
+            # Right Sub Tree
             if node.right:
                 self.insertNode(value, node.right)
             else:
                 node.right = Node(value)
+
+    # Insert Method Iterative
+    def insert(self, value):
+        if not self.root:
+            self.root = Node(value)
+        else:
+            node = self.root
+            while True:
+                # Left Sub Tree
+                if value < node.value:
+                    if node.left:
+                        node = node.left
+                    else:
+                        node.left = Node(value)
+                        break
+                # Right Sub Tree
+                if value > node.value:
+                    if node.right:
+                        node = node.right
+                    else:
+                        node.right = Node(value)
+                        break
 
     # Remove Method
     def removeNode(self, value):
