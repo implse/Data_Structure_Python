@@ -477,7 +477,7 @@ The tree rotation renders the inorder traversal of the binary tree invariant. Th
 
 Graphs are mathematical structures that represent pairwise relationships between objects. A graph is an abstract data structure that represents the relationship between various objects.
 
-A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between vertices called Edges or Links.
+A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a collection of connections between Vertices called Edges or Links.
 
 Definition:
 
@@ -492,11 +492,11 @@ There are tree types of graphs: Directed, Undirected and Weighted.
 
 #### Vocabulary
 
-__Edges:__ Represent the connection between two vertices.
+__Edges:__ Represent the connection between two Vertices.
 
 __Vertices:__ Nodes in the graph.
 
-__Path:__ A sequence of connected vertices.
+__Path:__ A sequence of connected Vertices.
 
 __Cycles:__ A path that is cyclical.
 
@@ -575,7 +575,7 @@ Con : Slower for dense graph.
 - Internally this Algorithm uses a Queue.
 
 We visit every vertex exactly once.
-We visit the neighbors the the neighbors of these new vertices and so on.
+We visit the neighbors the the neighbors of these new Vertices and so on.
 
 Time complexity : O(V + E)
 Memory complexity is not good. We have to store a lot of references. O(N)
@@ -585,6 +585,12 @@ Memory complexity is not good. We have to store a lot of references. O(N)
 - Internally this Algorithm uses a Stack.
 
 It explores as far as possible along each branch before backtracking.
+
+There are three main traversal orders that you’ll come across for graph traversal:
+
+PreOrder : Each vertex is added to the visited list and added to the output list BEFORE getting added to the Stack.
+PostOrder : Each vertex is added to the visited list and added to the output list AFTER it is popped off the Stack.
+Reverse PostOrder (also known as Topological Sort): Which returns an output list that is exactly the reverse of the post-order list.
 
 Time complexity : O(V + E)
 

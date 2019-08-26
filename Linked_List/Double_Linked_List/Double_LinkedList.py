@@ -20,6 +20,7 @@ class Double_LinkedList(object):
 		else:
 			self.head = new_node
 		self.size += 1
+		
 	# Add value to the tail of List
 	def add_to_tail(self, value):
 		new_node = Node(value)
