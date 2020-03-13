@@ -611,8 +611,9 @@ DAG : Directed Acyclic Graph is a finite directed graph with no directed cycles.
 - Finding a path between two vertices in a graph such that the sum of the weights of its edges is minimized.
 
 - Dijkstra algorithm
-- Floyd Warshall algorithm
-- A* Search
+- Floyd-Warshall algorithm
+- Bellman-Ford algorithm
+- A* Search algorithm
 
 ## Dijkstra algorithm
 
@@ -656,5 +657,7 @@ It was invented in 1958 by Bellman Ford respectively.
 
 
 Slower than Dijkstra's but more robust. It can handle negative edge weight.
+
+If the graph has negative edge costs, then Dijkstra's algorithm cannot work. The problem is that once a vertex `u` is declared known, it is possible that from some other unknown vertex `v` there is a path back t o `u` that is negative. In such case, taking a path from `s` to `v` back to `u` is better than going from `s` to `u` without using `v`.
 
 Time Complexity : `O (V * E)`
