@@ -41,11 +41,11 @@ An individual node contains data and links to other nodes. Each data structure a
 
 |Operation                   |Big O    |
 |----------------------------|---------|
-|Indexing                    |O(n)     |
-|Insert/Delete at beginning  |O(1)     |
-|Insert/Delete at ending     |O(1)/O(n)|
-|Insertion/Deletion in middle|O(n)     |
-|Access Time                 |O(n)     |
+|Indexing                    |`O(n)`   |
+|Insert/Delete at beginning  |`O(1)`   |
+|Insert/Delete at ending     |`O(1)/O(n)`|
+|Insertion/Deletion in middle|`O(n)`   |
+|Access Time                 |`O(n)`   |
 
 * Insert/Delete at ending : depend on the implementation. Tail reference.
 
@@ -98,8 +98,8 @@ Stacks can be implemented using a linked list as the underlying data structure b
 
 |Operation                   |Big O  |
 |----------------------------|-------|
-|Push value                  |O(1)   |
-|Pop value                   |O(1)   |
+|Push value                  |`O(1)` |
+|Pop value                   |`O(1)` |
 
 
 ### Basic Operations on Stack
@@ -133,9 +133,9 @@ Queues can be implemented using a linked list as the underlying data structure. 
 
 |Operation                   |Big O  |
 |----------------------------|-------|
-|Search                      |O(n)   |
-|Insert                      |O(1)   |
-|Delete                      |O(1)   |
+|Search                      |`O(n)` |
+|Insert                      |`O(1)` |
+|Delete                      |`O(1)` |
 
 ### Basic Operations on Queue
 
@@ -198,9 +198,9 @@ The issue with Linear Probing  is that the act of simply moving over the next av
 
 |Operation                   |Big O  |
 |----------------------------|-------|
-|Search                      |O(1)   |
-|Insert                      |O(1)   |
-|Delete                      |O(1)   |
+|Search                      |`O(1)` |
+|Insert                      |`O(1)` |
+|Delete                      |`O(1)` |
 
 
 #### Applications
@@ -287,9 +287,9 @@ No duplicate Keys.
 
 |Operation                   |Big O    |
 |----------------------------|---------|
-|Search                      |O(log n) |
-|Insert                      |O(log n) |
-|Delete                      |O(log n) |
+|Search                      |`O(log n)`|
+|Insert                      |`O(log n)`|
+|Delete                      |`O(log n)`|
 
 
 
@@ -448,10 +448,10 @@ AVL Tree Time Complexity:
 
 |Operation                   |Average  |  Worst  |
 |----------------------------|---------|---------
-|Search                      |O(log n) |O(log n) |
-|Insert                      |O(log n) |O(log n) |
-|Delete                      |O(log n) |O(log n) |
-|Remove                      |O(log n) |O(log n) |
+|Search                      |`O(log n)`|`O(log n)`|
+|Insert                      |`O(log n)`|`O(log n)`|
+|Delete                      |`O(log n)`|`O(log n)`|
+|Remove                      |`O(log n)`|`O(log n)`|
 
 For every node, height of the left and right children differ by at most +-1.
 
@@ -481,10 +481,10 @@ A Graph is a pair V, E, where V is a set of Nodes called Vertices, and E is a co
 
 Definition:
 
-  - G = (V, E)
+  - `G = (V, E)`
 
-  V is a set of Vertices or Nodes.(number of Vertices)
-  E is a set of Edges or Links.(number of connections)
+  `V` is a set of Vertices or Nodes.(number of Vertices)
+  `E` is a set of Edges or Links.(number of connections)
 
 
 
@@ -616,7 +616,7 @@ DAG : Directed Acyclic Graph is a finite directed graph with no directed cycles.
 
 ## Dijkstra algorithm
 
-- It was constructed by computer scientist Edsger Dijkstra in 1956.
+- It was invented by computer scientist Edsger Dijkstra in 1956.
 - This is the fastest know single source shortest path algorithm for arbitrary directed graphs with unbounded non-negative weights.
 
 - It uses greedy method: Always pick the next closest vertex to the source.
@@ -633,7 +633,7 @@ DAG : Directed Acyclic Graph is a finite directed graph with no directed cycles.
 
 - We update the distances in case the newly computed distance is smaller than the old distance which we have already computed.
 
-Time Complexity : O(V * Log(V) + E)
+Time Complexity : `O(V * Log(V) + E)`
 
 __Pseudo code__
 
@@ -646,3 +646,15 @@ __Pseudo code__
 Dijkstra algorithm find the fastest path.
 
 Breadth-first search find the path with the fewest segments.
+
+## Bellman-Ford
+
+The Bellman-Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertives in a weighted directed graph.
+
+
+It was invented in 1958 by Bellman Ford respectively.
+
+
+Slower than Dijkstra's but more robust. It can handle negative edge weight.
+
+Time Complexity : `O (V * E)`
