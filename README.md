@@ -650,7 +650,7 @@ Breadth-first search find the path with the fewest segments.
 
 ## Bellman-Ford
 
-The Bellman-Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertives in a weighted directed graph.
+The Bellman-Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted directed graph.
 
 
 It was invented in 1958 by Bellman Ford respectively.
@@ -659,5 +659,7 @@ It was invented in 1958 by Bellman Ford respectively.
 Slower than Dijkstra's but more robust. It can handle negative edge weight.
 
 If the graph has negative edge costs, then Dijkstra's algorithm cannot work. The problem is that once a vertex `u` is declared known, it is possible that from some other unknown vertex `v` there is a path back t o `u` that is negative. In such case, taking a path from `s` to `v` back to `u` is better than going from `s` to `u` without using `v`.
+
+Finding negative cycles can be useful in many types of application.
 
 Time Complexity : `O (V * E)`
