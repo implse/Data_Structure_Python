@@ -329,12 +329,26 @@ An AVL Tree and a Red-Black Tree are some common examples of data structure that
 
 - 2 methods for DFS recursive or iterative.
 - Iterative method use a stack (LIFO).
-- Recursive method use stack memory.
+- Recursive method use stack-based memory.
 
 
-- __InOrder:__ visit the Left SubTree then the Root then the Right SubTree recursively.
-- __PreOrder:__ visit the Root then Left SubTree then the Right SubTree recursively.
-- __PostOrder:__ visit the Left SubTree then the right Sub Tree and the Root recursively.
+- __In-Order:__
+
+    - visit the Left SubTree then the Root then the Right SubTree recursively.
+    - In-order traversal is used to retrieve data of binary search tree in sorted order.
+
+
+- __Pre-Order:__
+
+    - visit the Root then Left SubTree then the Right SubTree recursively.
+    - Pre-Order traversal is used to create a copy of the tree and is also used to get prefix expression of an expression tree.
+
+
+
+- __Post-Order:__
+
+    - visit the Left SubTree then the right Sub Tree and the Root recursively.
+    - Post-Order traversal is used to delete the tree and is also used to get the postfix expression of an expression tree.
 
 
 ### Breadth First Search Traversal
@@ -355,7 +369,7 @@ O(log n) find operation + O(1) deletion = O(log n)
 
 #### Method for Two Children case:
 
-Two possible options: We look for the largest Node in the left subtree (Predecessor) or the smallest Node int the right subtree (Successor).
+Two possible options: We look for the largest Node in the left subtree (Predecessor) or the smallest Node in the right subtree (Successor).
 
 - Start at the Root, find the node to delete.
 - Find Predecessor or Successor
