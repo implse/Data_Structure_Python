@@ -179,14 +179,14 @@ Collisions occur whenever a hash tables hashing function generates the same inde
 
 #### Separate Chaining
 
-Seperate Chaining is one of the most commonly used collision resolution technique. It is usually implemented using linked list.
+Separate Chaining is one of the most commonly used collision resolution technique. It is usually implemented using linked list.
 
 A hash map that uses separate chaining with linked lists but experiences frequent collisions loses one of its most essential features.
 
 With a good hash function chaining still averages out to have a search time of O(1), or constant lookup time.
 
 
-#### Linear Probing (Open Adressing)
+#### Linear Probing (Open Addressing)
 
 In open addressing we stick to the array as our underlying data structure, but we continue looking for a new index to save our data if the first result of our hash function has a different key’s data.
 
@@ -270,10 +270,9 @@ No duplicate Keys.
 ### Advantages
 
 - Fast search, insertion, deletion especially when balanced.
-
 - Sort as you go instead of all at once.
-
 - Simple implementation for good performance.
+- Only two traversals are enough to provide the elements in sorted order.
 
 ### Basic Operations on Binary Tree
 
@@ -294,6 +293,33 @@ No duplicate Keys.
 
 
 If the Tree become unbalanced then the operations running times can be reduced to O(n).(worst case)
+
+### Why is Binary Tree is so widely used?
+
+Binary Tree is the most simplest and efficient data structure to be used in most Software Systems. It is the properties of Binary Tree that makes it so widely used.
+
+There is a wide range of variants of Binary Tree which makes it very likely to find a suitable variant for a specific problem.
+
+### Types of Binary Trees
+
+
+There are various types of binary trees, and each of these binary tree types has unique characteristics.
+
+
+#### Complete Binary Tree
+
+A complete binary tree is a tree where all the tree levels are filled entirely with nodes, except the lowest level of the tree. Also, in the last or the lowest level of this binary tree, every node should possibly reside on the left side.
+
+
+#### Perfect Binary Tree
+
+A binary tree is said to be perfect if all the internal nodes have strictly two children, and every external or leaf node is at the same level or same depth within a tree. A perfect binary tree having `height`  has `2h – 1` node.
+
+#### Balanced Binary Tree
+
+A binary tree is said to be ‘balanced’ if the tree height is `O(log n)`, where `n` is the number of nodes. In a balanced binary tree, the height of the left and the right subtrees of each node should vary by at most one.
+
+An AVL Tree and a Red-Black Tree are some common examples of data structure that can generate a balanced binary search tree.
 
 
 ### Binary Search Tree Traversals
@@ -433,7 +459,7 @@ Balancing a heap is done by sift-up or sift-down operations (swapping elements w
 
 Heap sort algorithm is a sorting technique that is based exclusively upon a binary heap data structure. It involves finding the largest (maximum) element, and sorting it at the end of an unsorted collection.
 
-Python has a heapq module that implements a priority queue using a binary heap.
+Python has a `heapq` module that implements a priority queue using a binary heap.
 
 Time Complexity: O(n log n)
 Space Complexity: O(n)
@@ -469,9 +495,9 @@ The secret ingredient to most AVL Tree (Balanced Binary Search Tree) algorithms 
 
 A tree invariant is a property or rule you impose on your tree that it must meet after every operation. To ensure that the invariant is always satisfied a series of tree rotations are normally applied.
 
-#### InOrder invariance
+#### In-Order invariance
 
-The tree rotation renders the inorder traversal of the binary tree invariant. This implies the order of the elements are not affected when a rotation is performed in any part of the tree.
+The tree rotation renders the in-order traversal of the binary tree invariant. This implies the order of the elements are not affected when a rotation is performed in any part of the tree.
 
 ## Graph
 
@@ -661,5 +687,12 @@ Slower than Dijkstra's but more robust. It can handle negative edge weight.
 If the graph has negative edge costs, then Dijkstra's algorithm cannot work. The problem is that once a vertex `u` is declared known, it is possible that from some other unknown vertex `v` there is a path back t o `u` that is negative. In such case, taking a path from `s` to `v` back to `u` is better than going from `s` to `u` without using `v`.
 
 Finding negative cycles can be useful in many types of application.
+
+The Bellman-Ford algorithm, uses the principle of relaxation to find increasingly accurate path length.
+
+Relaxation is the most important step in Bellman-Ford. It is what increases the accuracy of the distance to any given vertex. Relaxation works by continuously shortening the calculated distance between vertices comparing that distance with other known distances.
+
+The detection of negative cycles is important, but the main contribution of this algorithm is in its ordering of relaxations. Dijkstra's algorithm is a greedy algorithm that selects the nearest vertex that has not been processed. Bellman-Ford, on the other hand, relaxes all of the edges.
+
 
 Time Complexity : `O (V * E)`
