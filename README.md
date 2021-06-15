@@ -139,11 +139,11 @@ Queues can be implemented using a linked list as the underlying data structure. 
 
 ### Basic Operations on Queue
 
-- Enqueue - adds data to the “back” or end of the queue.
+- `En-queue` - adds data to the `back` or end of the `queue`.
 
-- DeQueue - provides and removes data from the “front” or beginning of the queue.
+- `De-queue` - removes and return data from the `front` or beginning of the `queue`.
 
-- Peek - reveals data from the “front” of the queue without removing it.
+- `Peek` - return data from the `front` of the `queue` without removing it.
 
 ### Applications
 
@@ -224,23 +224,23 @@ Tree is an example of non-linear data structure.
 
 ### Glossary
 
-__Root:__ Top most node.
+`Root` : Top most node.
 
-__Edge__ : Refer to the link from parent to child.
+`Edge` : Refer to the link from parent to child.
 
-__Siblings:__ Children of the same parent.
+`Siblings` : Children of the same parent.
 
-__Leaf:__ A node with no children.
+`Leaf` : A node with no children.
 
-__Height (Tree):__ The height of a tree is the length of the path from the root to the deepest node in the tree.
+`Height` (Tree) : The height of a tree is the length of the path from the root to the deepest node in the tree.
 
-__Height (Node):__ The height of a node is the length of the path from that node to the deepest node. Or is the number of layers it contains.
+`Height` (Node) : The height of a node is the length of the path from that node to the deepest node. Or is the number of layers it contains.
 
-__Level:__ Number of edges between the node and the root + 1.
+`Level` : Number of edges between the node and the root + 1.
 
-__Depth:__ Number of edges between the node and the root.
+`Depth` : Number of edges between the node and the root.
 
-__Size:__ Number of nodes in the tree.
+`Size` : Number of nodes in the tree.
 
 
 ## Binary Tree
@@ -313,7 +313,9 @@ A complete binary tree is a tree where all the tree levels are filled entirely w
 
 #### Perfect Binary Tree
 
-A binary tree is said to be perfect if all the internal nodes have strictly two children, and every external or leaf node is at the same level or same depth within a tree. A perfect binary tree having `height`  has `2h – 1` node.
+A binary tree is said to be perfect if all the internal nodes have strictly two children, and every external or leaf node is at the same level or same depth within a tree.
+
+A perfect binary tree having `height`  has `2n – 1` node.
 
 #### Balanced Binary Tree
 
@@ -321,6 +323,14 @@ A binary tree is said to be ‘balanced’ if the tree height is `O(log n)`, whe
 
 An AVL Tree and a Red-Black Tree are some common examples of data structure that can generate a balanced binary search tree.
 
+#### Height of Binary Tree
+
+The height of the binary tree is the longest path from root node to any leaf node in the tree.
+
+If there are n nodes in binary tree :
+
+  - maximum height of the binary tree is `n-1`.
+  - minimum height is `floor(log2(n))`
 
 ### Binary Search Tree Traversals
 
