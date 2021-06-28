@@ -79,20 +79,24 @@ or shrink throughout the execution.
   <img width="480" height="360" src="images\Stack_180_360.png">
 </p>
 
-A Stack is a simple data structure used for storing data.
+A `stack` is a simple data structure used for storing data.
 
-The last element inserted is the first one to be removed. Last In, First Out (LIFO).
+The `last` element inserted is the `first` one to be removed. `Last In, First Out` -  `LIFO`.
 
-Stacks can be implemented using a linked list as the underlying data structure because it’s more efficient than a list or array.
+Stacks can be implemented using a `list` or `linked-list` as the underlying data structure because.
 
-- Contains data nodes.
-- Support three main operations :
-    - Push adds data to the top of the stack.
-    - Pop removes and provides data from the top of the stack.
-    - Peek reveals data on the top of the stack.
-- Implemented using a Linked List or Array.
+### Stack Methods:
+
+- `push` adds item to the top of the stack.
+- `pop` return and removes item from the top of the stack.
+- `peek` return item on the top of the stack without removing it.
+- `is_empty` return `True` if the stack is empty.
+- `get_length` return the number of items in the stack.
+
+
+- Implemented using `list`, `Linked List` or `array`.
 - Can have a limited size.
-- Stack process data Last In, First Out
+- Stack process item Last In, First Out.
 
 ### Time Complexity
 
@@ -100,21 +104,16 @@ Stacks can be implemented using a linked list as the underlying data structure b
 |----------------------------|-------|
 |Push value                  |`O(1)` |
 |Pop value                   |`O(1)` |
+|Peek value                   |`O(1)` |
 
-
-### Basic Operations on Stack
-
-- Push - adds data to the top of the stack.
-- Pop - returns and removes data from the top of the stack.
-- Peek - returns data from the to” of the stack without removing it.
 
 ### Applications
 
-- Stack Memory.
-- Implementing function calls (memory stack, recursion)
-- Depth-First Search algorithms can be implemented with stack (or recursion).
+- Stack Memory, implementing function calls (memory stack, recursion)
+- Depth-First Search algorithms is implemented with stack or memory stack if using recursion.
 - Finding Euler-Cycles in a graph.
-- Balancing symbols.
+- Balancing symbols and evaluating expressions.
+- Backtracking algorithms.
 
 ## Queue
 
@@ -226,7 +225,7 @@ Tree is an example of non-linear data structure.
 
 `Root` : Top most node.
 
-`Edge` : Refer to the link from parent to child.
+`Edge` : link between nodes. (parent to child).
 
 `Siblings` : Children of the same parent.
 
