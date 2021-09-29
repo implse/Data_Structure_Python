@@ -388,6 +388,10 @@ Two possible options: We look for the largest Node in the left subtree (Predeces
 
 ## Binary Heap
 
+<p align="center">
+  <img width="480" height="360" src="images\Heap_480_360.png">
+</p>
+
 A Binary Heap is a specialized Binary Search Tree data structure that satisfies the `heap property`.
 
 A Binary Heap is define as a Binary Tree with two additional properties.
