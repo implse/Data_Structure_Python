@@ -244,15 +244,15 @@ Tree is an example of non-linear data structure.
 
 ## Binary Tree
 
-Binary Tree is a specialized form of tree with two child (left child and right child). It is simply a representation of data in Tree structure.
+Binary Tree is a specialized form of `tree` with two child, `left child` and `right child`. It is simply a representation of data in Tree structure.
 
-Strict Binary Tree : each node has exactly two children or no children.
+Strict Binary Tree : each `node` has exactly two children or no children.
 
-Full Binary Tree : each node has exactly two children and are all leaf nodes.
+Full Binary Tree : each `node` has exactly two children and are all leaf nodes.
 
-The number of nodes n in a full binary tree is (2^h + 1) - 1.
+The number of nodes `n` in a full binary tree is: `(2^h + 1) - 1`
 
-Since, there are h levels we need to add all nodes at each level [ 2^0 + 2^1 + 2^2 + ... + 2^h = (2^h + 1) - 1].
+Since, there are `h` levels we need to add all nodes at each level: `[ 2^0 + 2^1 + 2^2 + ... + 2^h = (2^h + 1) - 1]`
 
 ## Binary Search Tree
 
@@ -260,8 +260,8 @@ Always sorted by implementation.
 
 Binary Search Tree (BST or Ordered Binary Tree) is a special type of Binary Tree that follows these conditions:
 
-- Left child node is smaller than its Parent node.
-- Right child node is greater than its Parent Node.
+- `Left child node` is smaller than its `Parent node`.
+- `Right child node` is greater than its `Parent Node`.
 
 
 No duplicate Keys.
@@ -291,7 +291,7 @@ No duplicate Keys.
 
 
 
-If the Tree become unbalanced then the operations running times can be reduced to O(n).(worst case)
+If the Tree become unbalanced then the operations running times can be reduced to `O(n)`.(worst case)
 
 ### Why is Binary Tree is so widely used?
 
@@ -320,13 +320,13 @@ A perfect binary tree having `height`  has `2n – 1` node.
 
 A binary tree is said to be ‘balanced’ if the tree height is `O(log n)`, where `n` is the number of nodes. In a balanced binary tree, the height of the left and the right subtrees of each node should vary by at most one.
 
-An AVL Tree and a Red-Black Tree are some common examples of data structure that can generate a balanced binary search tree.
+An `AVL Tree` and a `Red-Black Tree` are some common examples of data structure that can generate a balanced binary search tree.
 
 #### Height of Binary Tree
 
-The height of the binary tree is the longest path from root node to any leaf node in the tree.
+The height of the binary tree is the longest path from `root node` to any `leaf node` in the `tree`.
 
-If there are n nodes in binary tree :
+If there are `n` nodes in binary tree :
 
   - maximum height of the binary tree is `n-1`.
   - minimum height is `floor(log2(n))`
@@ -336,40 +336,40 @@ If there are n nodes in binary tree :
 
 ### Depth First Search Traversal
 
-- 2 methods for DFS recursive or iterative.
+- 2 methods for `DFS` recursive or iterative.
 - Iterative method use a stack (LIFO).
 - Recursive method use stack-based memory.
 
 
-- __In-Order:__
+- `In-order`
 
     - visit the Left SubTree then the Root then the Right SubTree recursively.
-    - In-order traversal is used to retrieve data of binary search tree in sorted order.
+    - `In-order` traversal is used to retrieve data of binary search tree in sorted order.
 
 
-- __Pre-Order:__
+- `Pre-Order`
 
     - visit the Root then Left SubTree then the Right SubTree recursively.
-    - Pre-Order traversal is used to create a copy of the tree and is also used to get prefix expression of an expression tree.
+    - `Pre-Order` traversal is used to create a copy of the tree and is also used to get prefix expression of an expression tree.
 
 
 
-- __Post-Order:__
+- `Post-Order`
 
     - visit the Left SubTree then the right Sub Tree and the Root recursively.
-    - Post-Order traversal is used to delete the tree and is also used to get the postfix expression of an expression tree.
+    - `Post-Order` traversal is used to delete the tree and is also used to get the postfix expression of an expression tree.
 
 
 ### Breadth First Search Traversal
 
-- BFS use priority queue.
+- `BFS` use priority queue.
 - Level Order Traversal.
 
 
 ### Delete a Node in a Binary Search Tree
 
-Complexity : We have to find the Node then we delete it or set it to None.
-O(log n) find operation + O(1) deletion = O(log n)
+Complexity : We have to find the `node` then we delete it or set it to `None`.
+`O(log n)` find operation + `O(1)` deletion = `O(log n)`
 
 #### 3 Cases:
 - No children.
@@ -388,7 +388,7 @@ Two possible options: We look for the largest Node in the left subtree (Predeces
 
 ## Binary Heap
 
-A Binary Heap is a specialized Binary Search Tree data structure that satisfies the heap property.
+A Binary Heap is a specialized Binary Search Tree data structure that satisfies the `heap property`.
 
 A Binary Heap is define as a Binary Tree with two additional properties.
 
@@ -398,16 +398,16 @@ A Binary Heap is define as a Binary Tree with two additional properties.
 
 ### Heap ordering property
 
-- Min heap : Each node is greater than or equal to its parent. min value is root.
-- Max heap : Each node is less than or equal to its parent. max value is root.
+- `Min heap` : Each `node` is greater than or equal to its parent. `min` value is `root`.
+- `Max heap` : Each `node` is less than or equal to its parent. `max` value is `root`.
 
 Heaps are not sorted, considered "partially ordered".
 
 ### Priority Queues
 
-- Almost always implement with a heap.
+- Almost always implement with a `heap`.
 - Element with smaller numbers are higher priority.
-- Element are inserted in O(log n) time.
+- Element are inserted in `O(log n)` time.
 - Ordering happens with each insertion, so the cost of ordering is distributed across insertion instead of in one big chunk.
 
 #### Applications
@@ -418,43 +418,43 @@ Bayesian spam filtering.
 Data compression.
 OS load Balancing, interrupt handling.
 
-Height = log(n + 1) - 1
-ex : if a Tree has 15 node : log(15 + 1) - 1 = 4 - 1 = 3
+`Height = log(n + 1) - 1`
+ex : if a Tree has 15 `node` : `log(15 + 1) - 1 = 4 - 1 = 3`
 
 #### Array representation
 
 Place values into array following level-order traversal.
 
-- Left child index : 2n + 1
-- Right child index : 2n + 2
-- Parent index : (n - 1) / 2
+- Left child index : `2n + 1`
+- Right child index : `2n + 2`
+- Parent index : `(n - 1) / 2`
 
 Array implementation use less memory.(no node class require)
-Can sort an array in-place.(Heapsort)
+Can sort an array `in-place`.(Heapsort)
 
 Insert element :
 - Insert at next available space.
-- Shift up or bubble up.
+- `Shift up` or `bubble up`.
 - Swap with parent until fulfills the ordering property.(trickle up) Fix heap violation.
 
 Remove element :
 
-- Replace root with last element.
-- Shift down (aka sink).
-- Swap with smallest child(min) or largest child(max) until fulfills the ordering property.
+- Replace `root` with `last element`.
+- `Shift down` (aka sink).
+- Swap with smallest child (`min`) or largest child (`max`) until fulfills the ordering property.
 
 Other methods
 
-- peek : find-min or find-max.
-- size : return the numbers of elements
+- `peek` : find-min or find-max.
+- `size` : return the numbers of elements
 
 ## Building the Heap
 
 - first we insert the data to the heap and we check wether the heap properties are met.
 - if the heap properties are violated, we reconstruct the heap in order to make it a valid heap.(heapify process)
 
-- it is O(n) process to construct a heap.
-- if heap properties are violated it takes O(log n) to heapify.
+- it is `O(n` process to construct a heap.
+- if heap properties are violated it takes `O(log n)` to heapify.
 - inserting an item to the heap is just adding the data to the array with incremented index.
 
 ### Add value to the Heap
@@ -473,8 +473,8 @@ Other methods
 
 Create a heap out of given array of elements.
 
-Input: an array usually unsorted, unordered.
-Output: an array that satisfies the heap property.
+`Input`: an array usually unsorted, unordered.
+`Output`: an array that satisfies the heap property.
 
 Balancing a heap is done by sift-up or sift-down operations (swapping elements which are out of order)
 
@@ -484,12 +484,12 @@ Heap sort algorithm is a sorting technique that is based exclusively upon a bina
 
 Python has a `heapq` module that implements a priority queue using a binary heap.
 
-Time Complexity: O(n log n)
-Space Complexity: O(n)
+Time Complexity: `O(n log n)`
+Space Complexity: `O(n)`
 
 ## AVL Tree
 
-An AVL Tree is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis.(1962)
+An `AVL Tree` is a self balancing Binary Search Tree. It is named after Adalson-Velskii and Landis.(1962)
 
 This type of tree will adjust itself in order to maintain a low (logarithmic) height allowing for faster operations such as insertions and deletions.
 
