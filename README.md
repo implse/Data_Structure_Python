@@ -14,7 +14,7 @@ Concrete implementation of Abstract Data Types ADTs that organize data stored in
 ## Linked List
 
 <p align="center">
-  <img width="480" height="180" src="images\LinkedList_480_180.png">
+  <img width="480" height="360" src="images\LinkedList_480_360.png">
 </p>
 
 A Linked List is a data structure used for storing collections of data. Each element of a linked list is called an node.
