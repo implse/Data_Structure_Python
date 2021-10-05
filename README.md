@@ -244,11 +244,11 @@ Tree is an example of non-linear data structure.
 
 ## Binary Tree
 
-Binary Tree is a specialized form of `tree` with two child, `left child` and `right child`. It is simply a representation of data in Tree structure.
+`Binary Tree` is a specialized form of `tree` with two child, `left child` and `right child`. It is simply a representation of data in `Tree structure`.
 
-Strict Binary Tree : each `node` has exactly two children or no children.
+`Strict Binary Tree` : each `node` has exactly two children or no children.
 
-Full Binary Tree : each `node` has exactly two children and are all leaf nodes.
+`Full Binary Tree` : each `node` has exactly two children and are all leaf nodes.
 
 The number of nodes `n` in a full binary tree is: `(2^h + 1) - 1`
 
@@ -256,13 +256,13 @@ Since, there are `h` levels we need to add all nodes at each level: `[ 2^0 + 2^1
 
 ## Binary Search Tree
 
-Always sorted by implementation.
 
-Binary Search Tree (BST or Ordered Binary Tree) is a special type of Binary Tree that follows these conditions:
+`Binary Search Tree` (BST or Ordered Binary Tree) is a special type of `Binary Tree` that follows these conditions:
 
 - `Left child node` is smaller than its `Parent node`.
 - `Right child node` is greater than its `Parent Node`.
 
+Always sorted by implementation.
 
 No duplicate Keys.
 
@@ -283,8 +283,8 @@ No duplicate Keys.
 - Finding the size of the Tree.
 - Finding the height of the Tree.
 
-|Operation                   |Big O    |
-|----------------------------|---------|
+|Operation                   |Big O     |
+|----------------------------|----------|
 |Search                      |`O(log n)`|
 |Insert                      |`O(log n)`|
 |Delete                      |`O(log n)`|
@@ -343,20 +343,20 @@ If there are `n` nodes in binary tree :
 
 - `In-order`
 
-    - visit the Left SubTree then the Root then the Right SubTree recursively.
+    - visit the `Left SubTree` then the `Root` then the `Right SubTree` recursively.
     - `In-order` traversal is used to retrieve data of binary search tree in sorted order.
 
 
 - `Pre-Order`
 
-    - visit the Root then Left SubTree then the Right SubTree recursively.
+    - visit the `Root` then `Left SubTree` then the `Right SubTree` recursively.
     - `Pre-Order` traversal is used to create a copy of the tree and is also used to get prefix expression of an expression tree.
 
 
 
 - `Post-Order`
 
-    - visit the Left SubTree then the right Sub Tree and the Root recursively.
+    - visit the `Left SubTree` then the `Right Sub Tree` and the `Root` recursively.
     - `Post-Order` traversal is used to delete the tree and is also used to get the postfix expression of an expression tree.
 
 
