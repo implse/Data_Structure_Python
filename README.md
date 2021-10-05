@@ -14,12 +14,12 @@ Concrete implementation of Abstract Data Types ADTs that organize data stored in
 ## Linked List
 
 <p align="center">
-  <img width="480" height="360" src="images\LinkedList_480_360.png">
+  <img width="480" height="360" src="images\Linked_List_480_360.png">
 </p>
 
-A Linked List is a data structure used for storing collections of data. Each element of a linked list is called an node.
+A `Linked List` is a data structure used for storing collections of `data`. Each element of a linked list is called an `node`.
 
-Linked Lists typically contain unidirectional links (next node), but some implementations make use of bidirectional links (next and previous nodes).
+Linked Lists typically contain an unidirectional links `next node`, but some implementations make use of bidirectional links (`next node` and `previous node`).
 
 - Not contiguous piece of memory.
 - Differing size storage space at each index.
