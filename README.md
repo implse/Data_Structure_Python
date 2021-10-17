@@ -6,6 +6,10 @@ Abstract data types are a theoretical computer science concept. They simply desc
 
 ## Data Structures (DS)
 
+<p align="center">
+  <img width="480" height="360" src="images\Data_Structure_480_360.png">
+</p>
+
 Concrete implementation of Abstract Data Types ADTs that organize data stored in memory. For every operation that is allowed on an abstract data type we have one method or one function that is defined by the data structure's class.
 
 - One Abstract data types operation  = One function in Data Structure.
