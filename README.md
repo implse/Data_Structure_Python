@@ -83,11 +83,11 @@ or shrink throughout the execution.
   <img width="480" height="360" src="images\Stack_180_360.png">
 </p>
 
-A `stack` is a simple data structure used for storing data.
+A `stack` is a simple data structure used for storing `data`.
 
 The `last` element inserted is the `first` one to be removed. `Last In, First Out` -  `LIFO`.
 
-Stacks can be implemented using a `list` or `linked-list` as the underlying data structure because.
+`Stacks` can be implemented using a `list` or `linked-list` as the underlying data structure because.
 
 ### Stack Methods:
 
@@ -100,7 +100,7 @@ Stacks can be implemented using a `list` or `linked-list` as the underlying data
 
 - Implemented using `list`, `Linked List` or `array`.
 - Can have a limited size.
-- Stack process item Last In, First Out.
+- `Stack` process item Last In, First Out.
 
 ### Time Complexity
 
@@ -125,12 +125,12 @@ Stacks can be implemented using a `list` or `linked-list` as the underlying data
   <img width="480" height="180" src="images\Queue_480_180.png">
 </p>
 
-A Queue is a data structure used for storing data similar to Stack.
+A `queue` is a data structure used for storing `data` similar to `stack`.
 
-The first element to be inserted is the first one to be removed. First In, First
-Out (FIFO).
+The first element to be inserted is the first one to be removed. `First In, First
+Out (FIFO)`.
 
-Queues can be implemented using a linked list as the underlying data structure. The front of the queue is equivalent to the head node of a linked list and the back of the queue is equivalent to the tail node.
+`Queues` can be implemented using a `linked list` as the underlying data structure. The `front` of the `queue` is equivalent to the `head node` of a `linked list` and the `back` of the `queue` is equivalent to the `tail node`.
 
 ### Time Complexity
 
@@ -156,22 +156,26 @@ Queues can be implemented using a linked list as the underlying data structure. 
 
 ## Hash Table
 
-Hash Table or Hash Map is a data structure that stores the keys and their associated values.
+<p align="center">
+  <img width="480" height="360" src="images\Hash_Table_480_360.png">
+</p>
 
-A Hash Table is basically made up of 2 different parts:
-  - An array which is the actual table where the data will be stored and what we must search through to find data.
-  - A Hash Function or Compression Function uses to transform Input Data or Key into index.
+`Hash Table` or `Hash Map` is a data structure that stores the `keys` and their associated `values` `(key, value pair)`.
 
-A good Hash Function should have the following characteristics:
+A `Hash Table` is basically made up of 2 different parts:
+  - A `list` which is the actual container where the data will be stored and what we must search through to find data.
+  - A `Hash Function` or `Compression Function` uses to transform `input` data or `key` into `index`.
+
+A good `Hash Function` should have the following characteristics:
   - Minimize Collisions.
   - Be easy and quick to compute.
-  - Distribute key values evenly in the hash table.
-  - Use all the information provided in the key.
-  - Have a high load factor for a given set of keys.
+  - Distribute `key` values evenly in the `hash table`.
+  - Use all the information provided in the `key`.
+  - Have a high load factor for a given set of `keys`.
 
 Load Factor = Number of elements in the Hash Table / Hash Table size
 
-Hashing is not a reversible process.
+`Hashing` is not a reversible process.
 Hash Table are Unordered and slow key iteration.
 
 
