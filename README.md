@@ -161,9 +161,10 @@ Out (FIFO)`.
 </p>
 
 `Hash Table` or `Hash Map` is a data structure that stores the `keys` and their associated `values` `(key, value pair)`.
+`Hash Table` provide constant time, insertion, deletion, and lookup.
 
 A `Hash Table` is basically made up of 2 different parts:
-  - A `list` which is the actual container where the data will be stored and what we must search through to find data.
+  - A `list` which is the actual container where the `data`.
   - A `Hash Function` or `Compression Function` uses to transform `input` data or `key` into `index`.
 
 A good `Hash Function` should have the following characteristics:
@@ -176,7 +177,6 @@ A good `Hash Function` should have the following characteristics:
 Load Factor = Number of elements in the Hash Table / Hash Table size
 
 `Hashing` is not a reversible process.
-Hash Table are Unordered and slow key iteration.
 
 
 
