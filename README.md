@@ -29,17 +29,18 @@ Linked Lists typically contain an unidirectional links `next node`, but some imp
 - Differing size storage space at each index.
 - Dynamic - New piece of memory allocated for each node.
 
-Linked Lists are sequential-access data structure.
+Linked Lists are `sequential access` data structure.
 
 ### Nodes
 
-Nodes are the fundamental building block of many computer science data structures. They form the basis for linked lists, stacks, queues, trees, and more.
+`Nodes` are the fundamental building block of many computer science data structures. They form the basis for `linked lists`, `trees` and more.
 
-An individual node contains data and links to other nodes. Each data structure adds additional constraints or behavior to these features to create the desired structure.
+An individual `node` contains data and links to other `nodes`. Each data structure adds additional constraints or behavior to these features to create the desired structure.
 
 - Contain data, which can be a variety of data types
-- Contain links to other nodes. If a node has no links, or they are all null/None, or you have reached the end of the path you were following.
-- Can be orphaned if there are no existing links to them.
+- Contain links to other `nodes`. If a `node` has no links then the `next` is `None`.
+
+The last `node` in a `linked list` points to `None`, and that tells you that it’s the end of the `linked list`.
 
 ### Time Complexity
 
@@ -118,6 +119,7 @@ The `last` element inserted is the `first` one to be removed. `Last In, First Ou
 - Finding Euler-Cycles in a graph.
 - Balancing symbols and evaluating expressions.
 - Backtracking algorithms.
+- Browser back button stack.
 
 ## Queue
 
@@ -151,7 +153,8 @@ Out (FIFO)`.
 ### Applications
 
 - IO Buffers.
-- CPU scheduling.
+- CPU scheduling, order processing.
+- Messaging
 
 
 ## Hash Table
