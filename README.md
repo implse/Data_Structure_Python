@@ -21,13 +21,13 @@ Concrete implementation of Abstract Data Types ADTs that organize data stored in
   <img width="480" height="360" src="images\Linked_List_480_360.png">
 </p>
 
-A `Linked List` is a data structure used for storing collections of `data`. Each element of a linked list is called an `node`.
+A `Linked list` is a data structure used for storing collections of `data`. Each element of a linked list is called an `node`.
 
-Linked Lists typically contain an unidirectional links `next node`, but some implementations make use of bidirectional links (`next node` and `previous node`).
+`Linked List` typically contain an unidirectional links `next node`, but `doubly linked list` make use of bidirectional links (`next node` and `previous node`).
 
+- New part of memory allocated for each node.
 - Not contiguous piece of memory.
 - Differing size storage space at each index.
-- Dynamic - New piece of memory allocated for each node.
 
 Linked Lists are `sequential access` data structure.
 
@@ -35,10 +35,10 @@ Linked Lists are `sequential access` data structure.
 
 `Nodes` are the fundamental building block of many computer science data structures. They form the basis for `linked lists`, `trees` and more.
 
-An individual `node` contains data and links to other `nodes`. Each data structure adds additional constraints or behavior to these features to create the desired structure.
+An individual `node` contains `data` and links to the `next node`. Each data structure adds additional constraints or behavior to these features to create the desired structure.
 
-- Contain data, which can be a variety of data types
-- Contain links to other `nodes`. If a `node` has no links then the `next` is `None`.
+- Contain data, which can be a variety of data types.
+- Contain links to other `nodes`. If a `node` has no links then the `next node` is `None`.
 
 The last `node` in a `linked list` points to `None`, and that tells you that itâ€™s the end of the `linked list`.
 
@@ -52,12 +52,11 @@ The last `node` in a `linked list` points to `None`, and that tells you that itâ
 |Insertion/Deletion in middle|`O(n)`   |
 |Access Time                 |`O(n)`   |
 
-* Insert/Delete at ending : depend on the implementation. Tail reference.
 
 ### Basic Operations on Linked List
 
 - Add value to Head/Tail
-- Add value at specific index
+- Add or Update value at specific index
 - Remove value
 - Find value
 - Create list from Linked List
@@ -67,15 +66,14 @@ The last `node` in a `linked list` points to `None`, and that tells you that itâ
 
 ### Advantages
 
-- You need Insertion / Deletion in the list to be extremely fast.
-- You Insert / Delete items in the middle of the list.
-- You canâ€™t evaluate the size of the list, it needs to grow
-or shrink throughout the execution.
+- Insertion / Deletion in the list is extremely fast.
+- Insert / Delete items in the middle of the list.
+- The size can grow or shrink throughout execution.
 
 ### Disadvantages
 
-- You frequently need random, unordered access to the data.
-- You need extreme performance to access the items.
+- Random, unordered access to the data.
+- Access a specific index extremely fast.
 - The number of items doesn't change during execution, so you can easily allocate contiguous space of computer memory.
 
 ## Stack
@@ -88,7 +86,7 @@ A `stack` is a simple data structure used for storing `data`.
 
 The `last` element inserted is the `first` one to be removed. `Last In, First Out` -  `LIFO`.
 
-`Stacks` can be implemented using a `list` or `linked-list` as the underlying data structure because.
+`Stacks` can be implemented using a `list` or `linked-list` as the underlying data structure.
 
 ### Stack Methods:
 
