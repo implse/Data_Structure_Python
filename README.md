@@ -1,16 +1,14 @@
 # Data Structure in Python
 
-## Abstract Data Types (ADTs)
-
-Abstract data types are a theoretical computer science concept. They simply describe what kind of data a data structure can hold and what operations are allowed on the data.
-
-## Data Structures (DS)
+A data structure is a specific way of organizing and storing data in a computer's memory to enable efficient access, modification, and manipulation of that data. Data structures can be thought of as containers for data elements, each with its own set of operations for performing tasks like insertion, deletion, retrieval, and traversal. Examples of data structures include arrays, linked lists, trees, and hash tables.
 
 <p align="center">
   <img width="480" height="360" src="images\Data_Structure_480_360.png">
 </p>
 
-Concrete implementation of Abstract Data Types ADTs that organize data stored in memory. For every operation that is allowed on an abstract data type we have one method or one function that is defined by the data structure's class.
+## Abstract Data Types (ADT)
+
+An abstract data type (ADT) is a high-level description of a data structure that defines a set of operations that can be performed on the data and specifies their behavior. An ADT abstracts away the implementation details, focusing solely on what the data structure does, not how it does it. It provides a clear interface for interacting with the data, allowing programmers to use the data structure without needing to know its internal workings. Examples of ADTs include lists, stacks, queues, and dictionaries, which can have multiple concrete implementations.
 
 - One Abstract data types operation  = One function in Data Structure.
 
