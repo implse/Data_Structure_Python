@@ -19,13 +19,13 @@ An abstract data type (ADT) is a high-level description of a data structure that
   <img width="480" height="360" src="images\Linked_List_480_360.png">
 </p>
 
-A `Linked list` is a data structure used for storing collections of `data`. Each element of a linked list is called an `node`.
+A `linked list` is a data structure used for storing collections of `data`. Each element of a `linked list` is called an `node`.
 
-`Linked List` typically contain an unidirectional links `next node`, but `doubly linked list` make use of bidirectional links (`next node` and `previous node`).
+`singly linked List` typically contain an unidirectional links `next node`, but `doubly linked list` make use of bidirectional links (`next node` and `previous node`).
 
-- New part of memory allocated for each node.
+- New part of memory allocated for each `node`.
 - Not contiguous piece of memory.
-- Differing size storage space at each index.
+- Differing size storage space at each `index`.
 
 Linked Lists are `sequential access` data structure.
 
@@ -432,13 +432,14 @@ OS load Balancing, interrupt handling.
 `Height = log(n + 1) - 1`
 ex : if a Tree has 15 `node` : `log(15 + 1) - 1 = 4 - 1 = 3`
 
-#### Array representation
+#### Array Representation
 
 Place values into array following level-order traversal.
 
-- Left child index : `2n + 1`
-- Right child index : `2n + 2`
-- Parent index : `(n - 1) / 2`
+- Root is A[0]
+- Left child of A[i] = `A[2*i+1]`
+- Right child if A[i] = `A[2*i+2]`
+- Parent of A[i] = `A[(i-1)/2]`
 
 Array implementation use less memory.(no node class require)
 Can sort an array `in-place`.(Heapsort)
@@ -464,7 +465,7 @@ Other methods
 - first we insert the data to the heap and we check wether the heap properties are met.
 - if the heap properties are violated, we reconstruct the heap in order to make it a valid heap.(heapify process)
 
-- it is `O(n` process to construct a heap.
+- it is `O(n)` process to construct a heap.
 - if heap properties are violated it takes `O(log n)` to heapify.
 - inserting an item to the heap is just adding the data to the array with incremented index.
 
@@ -482,16 +483,16 @@ Other methods
 
 ## Heapify
 
-Create a heap out of given array of elements.
+Create a `heap` out of given array of elements.
 
 `Input`: an array usually unsorted, unordered.
-`Output`: an array that satisfies the heap property.
+`Output`: an array that satisfies the `heap` property.
 
-Balancing a heap is done by sift-up or sift-down operations (swapping elements which are out of order)
+Balancing a `heap` is done by `sift-up` or `sift-down` operations (swapping elements which are out of order)
 
 ## Heapsort
 
-Heap sort algorithm is a sorting technique that is based exclusively upon a binary heap data structure. It involves finding the largest (maximum) element, and sorting it at the end of an unsorted collection.
+`Heapsort` algorithm is a sorting technique that is based exclusively upon a binary heap data structure. It involves finding the largest (maximum) element, and sorting it at the end of an unsorted collection.
 
 Python has a `heapq` module that implements a priority queue using a binary heap.
 
